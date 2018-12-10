@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2954117C21BEE99F00E34A8B /* NuevaCataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954117B21BEE99F00E34A8B /* NuevaCataController.swift */; };
 		296AA3B721BEC11F00B8AAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */; };
 		296AA3B921BEC11F00B8AAC3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3B821BEC11F00B8AAC3 /* MenuController.swift */; };
 		296AA3BC21BEC11F00B8AAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296AA3BA21BEC11F00B8AAC3 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2954117B21BEE99F00E34A8B /* NuevaCataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaCataController.swift; sourceTree = "<group>"; };
 		296AA3B321BEC11F00B8AAC3 /* firstAppWine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstAppWine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		296AA3B821BEC11F00B8AAC3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */,
 				296AA3B821BEC11F00B8AAC3 /* MenuController.swift */,
+				2954117B21BEE99F00E34A8B /* NuevaCataController.swift */,
 				296AA3BA21BEC11F00B8AAC3 /* Main.storyboard */,
 				296AA3C021BEC11F00B8AAC3 /* Assets.xcassets */,
 				296AA3C221BEC11F00B8AAC3 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2954117C21BEE99F00E34A8B /* NuevaCataController.swift in Sources */,
 				296AA3BF21BEC11F00B8AAC3 /* firstAppWine.xcdatamodeld in Sources */,
 				296AA3B921BEC11F00B8AAC3 /* MenuController.swift in Sources */,
 				296AA3B721BEC11F00B8AAC3 /* AppDelegate.swift in Sources */,
