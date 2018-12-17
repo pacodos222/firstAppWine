@@ -218,7 +218,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYG-sX-w5b">
                                 <rect key="frame" x="0.0" y="20" width="600" height="572"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-hz-TS5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-hz-TS5">
                                         <rect key="frame" x="182" y="0.0" width="236" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="236" id="EI7-1c-1ch"/>
@@ -234,33 +234,61 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-Gg-CRI">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-Gg-CRI">
                                         <rect key="frame" x="192" y="40" width="217" height="216"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="217" id="8Vz-mC-jwO"/>
                                         </constraints>
                                     </pickerView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-nm-gX4">
-                                        <rect key="frame" x="98" y="257" width="404" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-nm-gX4">
+                                        <rect key="frame" x="0.0" y="257" width="600" height="30"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-gT-WwB">
-                                                <rect key="frame" x="-2" y="0.0" width="356" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-gT-WwB">
+                                                <rect key="frame" x="-2" y="0.0" width="544" height="31"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="352" id="Pxo-a0-UaS"/>
-                                                    <constraint firstAttribute="height" constant="30" id="bE5-gN-anh"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Wk6-HU-mf2"/>
+                                                    <constraint firstAttribute="width" constant="500" id="gkg-q2-msf"/>
+                                                    <constraint firstAttribute="width" constant="270" id="oHx-TR-A0J"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="gkg-q2-msf"/>
+                                                        <exclude reference="oHx-TR-A0J"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="valorSlider:" destination="SBz-f9-fm9" eventType="valueChanged" id="TcK-DP-PNY"/>
+                                                </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIW-n0-IOZ">
-                                                <rect key="frame" x="362" y="5" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIW-n0-IOZ">
+                                                <rect key="frame" x="550" y="5" width="50" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="F32-tJ-lcd"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Sug-gT-WwB" firstAttribute="leading" secondItem="HgN-nm-gX4" secondAttribute="leading" constant="5" id="8VG-Y7-Zq4"/>
+                                            <constraint firstAttribute="width" constant="500" id="8yM-Af-tcA"/>
+                                            <constraint firstItem="TIW-n0-IOZ" firstAttribute="top" secondItem="HgN-nm-gX4" secondAttribute="top" constant="5" id="GLS-yU-tVp"/>
+                                            <constraint firstItem="Sug-gT-WwB" firstAttribute="top" secondItem="HgN-nm-gX4" secondAttribute="top" id="yCw-Uj-XE6"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8yM-Af-tcA"/>
+                                                <exclude reference="8VG-Y7-Zq4"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-hR-gPW">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-hR-gPW">
                                         <rect key="frame" x="0.0" y="288" width="600" height="248"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="600" id="Vj4-MI-8gD"/>
+                                        </constraints>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDB-9h-T8F">
                                         <rect key="frame" x="255" y="537" width="91" height="35"/>
@@ -275,8 +303,23 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HgN-nm-gX4" secondAttribute="trailing" constant="50" id="1Qu-52-Cvm"/>
+                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" constant="50" id="LPM-4a-EaT"/>
+                                    <constraint firstItem="4A9-hR-gPW" firstAttribute="leading" secondItem="HgN-nm-gX4" secondAttribute="leading" id="Xdx-7U-B5M"/>
                                     <constraint firstItem="4A9-hR-gPW" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" id="fkP-XV-7pj"/>
+                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" constant="50" id="h5g-hQ-nY4"/>
+                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="4A9-hR-gPW" secondAttribute="leading" id="mof-jc-nun"/>
+                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="top" secondItem="ZYG-sX-w5b" secondAttribute="top" constant="257" id="wCp-D3-fDp"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Qu-52-Cvm"/>
+                                        <exclude reference="LPM-4a-EaT"/>
+                                        <exclude reference="h5g-hQ-nY4"/>
+                                        <exclude reference="mof-jc-nun"/>
+                                        <exclude reference="fkP-XV-7pj"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,6 +330,10 @@
                             <constraint firstItem="fKw-DL-DYK" firstAttribute="top" secondItem="ZYG-sX-w5b" secondAttribute="bottom" constant="8" id="fVw-UZ-ln3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelSlider" destination="TIW-n0-IOZ" id="YkR-p8-AOx"/>
+                        <outlet property="slider" destination="Sug-gT-WwB" id="X9i-5o-ByB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDH-76-PdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

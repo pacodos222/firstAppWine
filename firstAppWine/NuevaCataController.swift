@@ -10,8 +10,13 @@ import UIKit
 
 class NuevaCataController: UIViewController {
 
+    @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var labelSlider: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelSlider.text = "0"
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
 
@@ -23,6 +28,9 @@ class NuevaCataController: UIViewController {
     }
     
 
+    @IBAction func valorSlider(sender: UISlider) {
+        labelSlider.text = "\(slider.value)"
+    }
     /*
     // MARK: - Navigation
 
