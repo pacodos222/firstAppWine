@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2935B8BC21C7F49600C25D47 /* Cata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B621C7F49600C25D47 /* Cata+CoreDataProperties.swift */; };
+		2935B8BD21C7F49600C25D47 /* Cata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B721C7F49600C25D47 /* Cata.swift */; };
+		2935B8BE21C7F49600C25D47 /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B821C7F49600C25D47 /* Usuario+CoreDataProperties.swift */; };
+		2935B8BF21C7F49600C25D47 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B921C7F49600C25D47 /* Usuario.swift */; };
+		2935B8C021C7F49600C25D47 /* Vino+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8BA21C7F49600C25D47 /* Vino+CoreDataProperties.swift */; };
+		2935B8C121C7F49600C25D47 /* Vino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8BB21C7F49600C25D47 /* Vino.swift */; };
 		2954117C21BEE99F00E34A8B /* NuevaCataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954117B21BEE99F00E34A8B /* NuevaCataController.swift */; };
 		296AA3B721BEC11F00B8AAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */; };
 		296AA3B921BEC11F00B8AAC3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3B821BEC11F00B8AAC3 /* MenuController.swift */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2935B8B621C7F49600C25D47 /* Cata+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cata+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2935B8B721C7F49600C25D47 /* Cata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cata.swift; sourceTree = "<group>"; };
+		2935B8B821C7F49600C25D47 /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2935B8B921C7F49600C25D47 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		2935B8BA21C7F49600C25D47 /* Vino+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vino+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2935B8BB21C7F49600C25D47 /* Vino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vino.swift; sourceTree = "<group>"; };
 		2954117B21BEE99F00E34A8B /* NuevaCataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaCataController.swift; sourceTree = "<group>"; };
 		296AA3B321BEC11F00B8AAC3 /* firstAppWine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstAppWine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +74,12 @@
 		296AA3B521BEC11F00B8AAC3 /* firstAppWine */ = {
 			isa = PBXGroup;
 			children = (
+				2935B8B621C7F49600C25D47 /* Cata+CoreDataProperties.swift */,
+				2935B8B721C7F49600C25D47 /* Cata.swift */,
+				2935B8B821C7F49600C25D47 /* Usuario+CoreDataProperties.swift */,
+				2935B8B921C7F49600C25D47 /* Usuario.swift */,
+				2935B8BA21C7F49600C25D47 /* Vino+CoreDataProperties.swift */,
+				2935B8BB21C7F49600C25D47 /* Vino.swift */,
 				296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */,
 				296AA3B821BEC11F00B8AAC3 /* MenuController.swift */,
 				2954117B21BEE99F00E34A8B /* NuevaCataController.swift */,
@@ -148,11 +166,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				54DEBFBC21C40B6200670198 /* InicioController.swift in Sources */,
+				2935B8C121C7F49600C25D47 /* Vino.swift in Sources */,
 				2954117C21BEE99F00E34A8B /* NuevaCataController.swift in Sources */,
 				296AA3BF21BEC11F00B8AAC3 /* firstAppWine.xcdatamodeld in Sources */,
 				296AA3B921BEC11F00B8AAC3 /* MenuController.swift in Sources */,
 				296AA3B721BEC11F00B8AAC3 /* AppDelegate.swift in Sources */,
+				2935B8C021C7F49600C25D47 /* Vino+CoreDataProperties.swift in Sources */,
+				2935B8BC21C7F49600C25D47 /* Cata+CoreDataProperties.swift in Sources */,
+				2935B8BD21C7F49600C25D47 /* Cata.swift in Sources */,
 				54DEBFBA21C4051300670198 /* HistorialController.swift in Sources */,
+				2935B8BF21C7F49600C25D47 /* Usuario.swift in Sources */,
+				2935B8BE21C7F49600C25D47 /* Usuario+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
