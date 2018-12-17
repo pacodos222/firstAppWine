@@ -221,7 +221,8 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-hz-TS5">
                                         <rect key="frame" x="182" y="0.0" width="236" height="39"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="236" id="EI7-1c-1ch"/>
+                                            <constraint firstAttribute="width" constant="236" id="LoK-yV-ph7"/>
+                                            <constraint firstAttribute="height" constant="39" id="hNR-xK-WOb"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Nueva cata">
@@ -237,33 +238,22 @@
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-Gg-CRI">
                                         <rect key="frame" x="192" y="40" width="217" height="216"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="217" id="8Vz-mC-jwO"/>
+                                            <constraint firstAttribute="width" constant="217" id="UAG-ik-Qmb"/>
                                         </constraints>
                                     </pickerView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-nm-gX4">
-                                        <rect key="frame" x="0.0" y="257" width="600" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-nm-gX4">
+                                        <rect key="frame" x="25" y="257" width="550" height="30"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-gT-WwB">
-                                                <rect key="frame" x="-2" y="0.0" width="544" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Wk6-HU-mf2"/>
-                                                    <constraint firstAttribute="width" constant="500" id="gkg-q2-msf"/>
-                                                    <constraint firstAttribute="width" constant="270" id="oHx-TR-A0J"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="gkg-q2-msf"/>
-                                                        <exclude reference="oHx-TR-A0J"/>
-                                                    </mask>
-                                                </variation>
+                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-gT-WwB">
+                                                <rect key="frame" x="-2" y="0.0" width="473" height="31"/>
                                                 <connections>
                                                     <action selector="valorSlider:" destination="SBz-f9-fm9" eventType="valueChanged" id="TcK-DP-PNY"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIW-n0-IOZ">
-                                                <rect key="frame" x="550" y="5" width="50" height="20"/>
+                                                <rect key="frame" x="479" y="5" width="71" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="F32-tJ-lcd"/>
+                                                    <constraint firstAttribute="width" constant="71" id="1VD-rL-YNo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,23 +261,14 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Sug-gT-WwB" firstAttribute="leading" secondItem="HgN-nm-gX4" secondAttribute="leading" constant="5" id="8VG-Y7-Zq4"/>
-                                            <constraint firstAttribute="width" constant="500" id="8yM-Af-tcA"/>
-                                            <constraint firstItem="TIW-n0-IOZ" firstAttribute="top" secondItem="HgN-nm-gX4" secondAttribute="top" constant="5" id="GLS-yU-tVp"/>
-                                            <constraint firstItem="Sug-gT-WwB" firstAttribute="top" secondItem="HgN-nm-gX4" secondAttribute="top" id="yCw-Uj-XE6"/>
+                                            <constraint firstItem="TIW-n0-IOZ" firstAttribute="top" secondItem="HgN-nm-gX4" secondAttribute="top" constant="5" id="w4A-Kr-t2n"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="8yM-Af-tcA"/>
-                                                <exclude reference="8VG-Y7-Zq4"/>
-                                            </mask>
-                                        </variation>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-hR-gPW">
                                         <rect key="frame" x="0.0" y="288" width="600" height="248"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="600" id="Vj4-MI-8gD"/>
+                                            <constraint firstAttribute="height" constant="248" id="RBO-ji-gMD"/>
                                         </constraints>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDB-9h-T8F">
@@ -303,31 +284,23 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="HgN-nm-gX4" secondAttribute="trailing" constant="50" id="1Qu-52-Cvm"/>
-                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" constant="50" id="LPM-4a-EaT"/>
-                                    <constraint firstItem="4A9-hR-gPW" firstAttribute="leading" secondItem="HgN-nm-gX4" secondAttribute="leading" id="Xdx-7U-B5M"/>
-                                    <constraint firstItem="4A9-hR-gPW" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" id="fkP-XV-7pj"/>
-                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" constant="50" id="h5g-hQ-nY4"/>
-                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="4A9-hR-gPW" secondAttribute="leading" id="mof-jc-nun"/>
-                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="top" secondItem="ZYG-sX-w5b" secondAttribute="top" constant="257" id="wCp-D3-fDp"/>
+                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" constant="25" id="6Fp-XN-xGO"/>
+                                    <constraint firstItem="4A9-hR-gPW" firstAttribute="leading" secondItem="ZYG-sX-w5b" secondAttribute="leading" id="AqG-9i-FaR"/>
+                                    <constraint firstItem="HgN-nm-gX4" firstAttribute="leading" secondItem="4A9-hR-gPW" secondAttribute="leading" id="s6h-FO-bnb"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="1Qu-52-Cvm"/>
-                                        <exclude reference="LPM-4a-EaT"/>
-                                        <exclude reference="h5g-hQ-nY4"/>
-                                        <exclude reference="mof-jc-nun"/>
-                                        <exclude reference="fkP-XV-7pj"/>
+                                        <exclude reference="s6h-FO-bnb"/>
                                     </mask>
                                 </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZYG-sX-w5b" firstAttribute="top" secondItem="tkV-Rp-Wbm" secondAttribute="bottom" id="4o2-hP-eED"/>
-                            <constraint firstAttribute="trailing" secondItem="ZYG-sX-w5b" secondAttribute="trailing" id="Ol8-aA-em2"/>
-                            <constraint firstItem="ZYG-sX-w5b" firstAttribute="leading" secondItem="rh5-Vn-jz9" secondAttribute="leading" id="Wzk-J1-s2x"/>
-                            <constraint firstItem="fKw-DL-DYK" firstAttribute="top" secondItem="ZYG-sX-w5b" secondAttribute="bottom" constant="8" id="fVw-UZ-ln3"/>
+                            <constraint firstItem="fKw-DL-DYK" firstAttribute="top" secondItem="ZYG-sX-w5b" secondAttribute="bottom" constant="8" symbolic="YES" id="Tt0-fS-QsC"/>
+                            <constraint firstItem="ZYG-sX-w5b" firstAttribute="top" secondItem="tkV-Rp-Wbm" secondAttribute="bottom" id="ZNs-6q-VK7"/>
+                            <constraint firstItem="ZYG-sX-w5b" firstAttribute="leading" secondItem="rh5-Vn-jz9" secondAttribute="leading" id="hy1-Is-RT1"/>
+                            <constraint firstAttribute="trailing" secondItem="ZYG-sX-w5b" secondAttribute="trailing" id="phw-Pf-wfH"/>
                         </constraints>
                     </view>
                     <connections>
