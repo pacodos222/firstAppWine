@@ -10,9 +10,10 @@ import UIKit
 
 class SeleccionarVinoController: UIViewController {
 
+    @IBOutlet weak var labelNuevaCata: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
           self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }
 
