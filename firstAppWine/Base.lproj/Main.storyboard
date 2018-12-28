@@ -26,7 +26,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="300" image="prueba" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-UQ-Dkh">
                                         <rect key="frame" x="0.0" y="0.0" width="236" height="300"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-RQ-abS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-RQ-abS">
                                         <rect key="frame" x="91" y="310" width="54" height="23"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,17 +155,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZOh-rj-Ulg">
                                         <rect key="frame" x="0.0" y="87" width="284" height="118"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yo0-jc-zbX">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yo0-jc-zbX">
                                                 <rect key="frame" x="20" y="0.0" width="244" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8x6-YH-8xf">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8x6-YH-8xf">
                                                 <rect key="frame" x="20" y="41" width="244" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-l4-Vdq">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repetir contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-l4-Vdq">
                                                 <rect key="frame" x="20" y="83" width="244" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -289,19 +289,19 @@
                                 <rect key="frame" x="26" y="20" width="268" height="538"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cursoVinos" translatesAutoresizingMaskIntoConstraints="NO" id="A76-e0-B2m">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="418"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="410"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-Oi-yTQ">
-                                        <rect key="frame" x="86" y="418" width="96" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-Oi-yTQ">
+                                        <rect key="frame" x="86" y="410" width="96" height="68"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Usuario" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-xq-JiX">
                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
-                                                <color key="textColor" red="0.8565616904145078" green="0.8565616904145078" blue="0.8565616904145078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.68000000000000005" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contraseña" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9t2-XB-W4f">
-                                                <rect key="frame" x="0.0" y="30" width="96" height="30"/>
+                                                <rect key="frame" x="0.0" y="38" width="96" height="30"/>
                                                 <color key="textColor" red="0.73739070595854916" green="0.73739070595854916" blue="0.73739070595854916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -311,6 +311,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-P4-eFW">
                                         <rect key="frame" x="115" y="478" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="txL-7O-yGy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-Ag-wLo">
                                         <rect key="frame" x="95" y="508" width="78" height="30"/>
@@ -1297,9 +1300,9 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gqt-Qv-h5Z"/>
+        <segue reference="uzI-pI-7Tz"/>
+        <segue reference="txL-7O-yGy"/>
+        <segue reference="M5Q-G7-cei"/>
         <segue reference="y5Y-xK-dhZ"/>
-        <segue reference="XKi-4k-jol"/>
-        <segue reference="AQ2-P9-zJM"/>
     </inferredMetricsTieBreakers>
 </document>
