@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import CoreData
+
 
 class InicioController: UIViewController {
-
+    
+    @IBOutlet weak var usuarioTxt: UITextField!
+    @IBOutlet weak var passTxt: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +24,40 @@ class InicioController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func autentificacion() {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = appDelegate.managedObjectContext
+        let request = NSFetchRequest(entityName: "Usuario")
+        let predicados = NSPredicate(format: "%K == %@ AND %K == %@", argumentArray: ["username", usuarioTxt.text!,"password", passTxt.text!])
+        
+        request.predicate = predicados
+        
+        
+        do
+        {
+           let result = try context.executeFetchRequest(request) as! [NSManagedObject]
+            
+            if result.count == 1
+            {
+                performSegueWithIdentifier("segueLogin", sender: self)
+            }
+            else
+            {
+                let alert = UIAlertController(title: "Error", message: "La clave introducida es incorrecta, por favor vuelva a introducirla", preferredStyle: .Alert)
+                let accionOK = UIAlertAction(title: "Aceptar", style: .Default, handler: {(alert: UIAlertAction!) in print("error de autentificacion")})
+               
+                alert.addAction(accionOK)
+                self.presentViewController(alert, animated: true, completion: nil)
+               
+            }
+        }
+        catch
+        {}
+        
     }
     
 
@@ -31,5 +70,4 @@ class InicioController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
