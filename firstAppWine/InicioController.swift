@@ -48,7 +48,7 @@ class InicioController: UIViewController {
             else
             {
                 let alert = UIAlertController(title: "Error", message: "La clave introducida es incorrecta, por favor vuelva a introducirla", preferredStyle: .Alert)
-                let accionOK = UIAlertAction(title: "Aceptar", style: .Default, handler: {(alert: UIAlertAction!) in print("error de autentificacion")})
+                let accionOK = UIAlertAction(title: "Aceptar", style: .Default, handler: {(alert: UIAlertAction!) in print("Error de autentificacion")})
                
                 alert.addAction(accionOK)
                 self.presentViewController(alert, animated: true, completion: nil)
