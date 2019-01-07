@@ -812,6 +812,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="labelSlider" destination="TIW-n0-IOZ" id="YkR-p8-AOx"/>
+                        <outlet property="picker" destination="jSv-Gg-CRI" id="mxN-2A-kAx"/>
                         <outlet property="slider" destination="Sug-gT-WwB" id="X9i-5o-ByB"/>
                     </connections>
                 </viewController>
@@ -1314,9 +1315,9 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uzI-pI-7Tz"/>
-        <segue reference="txL-7O-yGy"/>
         <segue reference="M5Q-G7-cei"/>
+        <segue reference="uzI-pI-7Tz"/>
+        <segue reference="XKi-4k-jol"/>
         <segue reference="y5Y-xK-dhZ"/>
     </inferredMetricsTieBreakers>
 </document>
