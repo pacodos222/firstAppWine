@@ -303,17 +303,25 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-Oi-yTQ">
                                         <rect key="frame" x="86" y="410" width="96" height="68"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Usuario" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-xq-JiX">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-xq-JiX">
                                                 <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="96" id="6Eb-Bv-acg"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Nh8-m2-oD8"/>
+                                                </constraints>
                                                 <color key="textColor" white="0.68000000000000005" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contraseña" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9t2-XB-W4f">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9t2-XB-W4f">
                                                 <rect key="frame" x="0.0" y="38" width="96" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="96" id="mqn-gO-IaQ"/>
+                                                    <constraint firstAttribute="height" constant="30" id="sOi-hG-n0h"/>
+                                                </constraints>
                                                 <color key="textColor" red="0.73739070595854916" green="0.73739070595854916" blue="0.73739070595854916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1315,9 +1323,9 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M5Q-G7-cei"/>
+        <segue reference="txL-7O-yGy"/>
+        <segue reference="AQ2-P9-zJM"/>
         <segue reference="uzI-pI-7Tz"/>
-        <segue reference="XKi-4k-jol"/>
         <segue reference="y5Y-xK-dhZ"/>
     </inferredMetricsTieBreakers>
 </document>
