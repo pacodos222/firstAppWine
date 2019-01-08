@@ -17,10 +17,11 @@ class RegistrarseController: UIViewController {
     @IBOutlet weak var foto: UIImageView!
     
     var objeto = [NSManagedObject]()
+    var listaUsers = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mostrar()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)    }
 
     override func didReceiveMemoryWarning() {
@@ -50,8 +51,6 @@ class RegistrarseController: UIViewController {
     func registro(nombre: String, contra: String)
     {
         
-        print("Hola he llegado hasta aqui");
-        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entityForName("Usuario", inManagedObjectContext: managedContext)
@@ -60,8 +59,6 @@ class RegistrarseController: UIViewController {
         
         item.setValue(nombre, forKey: "username")
         item.setValue(contra, forKey: "password")
-        print(nombreUser.text!);
-        print(contrasena.text!);
         
         do{
             try managedContext.save()
@@ -70,5 +67,22 @@ class RegistrarseController: UIViewController {
             print ("Error")
         }
     }
+    
+    func mostrar() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Usuario")
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            for p in results {
+                listaUsers.append(p.valueForKey("username") as! String)
+            }
+            print(listaUsers)
+        }
+        catch{
+            print("FAIL")
+        }
+    }
+
 
 }
