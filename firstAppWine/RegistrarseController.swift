@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class RegistrarseController: UIViewController {
+class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var nombreUser: UITextField!
     @IBOutlet weak var contrasena: UITextField!
@@ -30,6 +30,19 @@ class RegistrarseController: UIViewController {
     }
     
     @IBAction func seleccionarImagen(sender: UITapGestureRecognizer) {
+        let imagePickerCtrl = UIImagePickerController()
+        imagePickerCtrl.sourceType = .PhotoLibrary
+        imagePickerCtrl.delegate = self
+        presentViewController(imagePickerCtrl,animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) { dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        foto.image = selectedImage
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
