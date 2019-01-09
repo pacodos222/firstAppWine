@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var slider: UISlider!
     
@@ -18,6 +18,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var atributoLabel: UILabel!
     
+    @IBOutlet weak var tabla: UITableView!
     
   
     
@@ -110,6 +111,16 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     }
     
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
+        cell.textLabel?.text = "AWEQWEQWEQWEQWEQWE"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
     
     
 
