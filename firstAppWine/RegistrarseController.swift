@@ -97,6 +97,19 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
             do{
                 try managedContext.save()
                 objeto.append(item as! Usuario)
+                let alerta2 = UIAlertController(title:"REGISTRO CORRECTO", message: "Se ha registrado correctamente",
+                                                preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let accion2 = UIAlertAction(title: "OK",
+                                            style: UIAlertActionStyle.Default) {
+                                                _ in alerta2.dismissViewControllerAnimated(true, completion: nil)
+                                                self.performSegueWithIdentifier("backInicioSegue", sender: nil)
+                                                
+                }
+                
+                alerta2.addAction(accion2)
+                self.presentViewController(alerta2, animated:true, completion: nil)
+                
             } catch {
                 print ("Error")
             }
