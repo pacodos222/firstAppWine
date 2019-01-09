@@ -10,6 +10,12 @@ import UIKit
 
 class ResultadoController: UIViewController {
 
+    @IBOutlet weak var imagenSeleccionada: UIImageView!
+    @IBOutlet weak var lblSeleccionado: UILabel!
+    @IBOutlet weak var imagenCorrecta: UIImageView!
+    @IBOutlet weak var lblCorrecta: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +27,7 @@ class ResultadoController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
