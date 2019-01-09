@@ -65,6 +65,7 @@ class RegistrarseController: UIViewController {
             let accion = UIAlertAction(title: "OK",
                                        style: UIAlertActionStyle.Default) {
                                         _ in alerta.dismissViewControllerAnimated(true, completion: nil)
+            self.nombreUser.text = "";
             }
             
             alerta.addAction(accion)
@@ -73,7 +74,7 @@ class RegistrarseController: UIViewController {
     
         
         //Comprobamos que la repeticion de contraseña sea igual
-        if((contra == repC))
+        if((contra == repC && contra.isEmpty == false && repC.isEmpty == false))
         {
             item.setValue(nombre, forKey: "username")
             item.setValue(contra, forKey: "password")
@@ -87,7 +88,7 @@ class RegistrarseController: UIViewController {
         }
         else
         {
-            let alerta = UIAlertController(title:"Error", message: "No coinciden la contraseña",
+            let alerta = UIAlertController(title:"Error", message: "No coinciden la contraseña o los campos están vacíos",
                                            preferredStyle: UIAlertControllerStyle.Alert)
             
             let accion = UIAlertAction(title: "OK",
