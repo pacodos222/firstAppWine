@@ -26,6 +26,7 @@
 		296AA3C421BEC11F00B8AAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296AA3C221BEC11F00B8AAC3 /* LaunchScreen.storyboard */; };
 		54DEBFBA21C4051300670198 /* HistorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DEBFB921C4051300670198 /* HistorialController.swift */; };
 		54DEBFBC21C40B6200670198 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DEBFBB21C40B6200670198 /* InicioController.swift */; };
+		A1E9DF5D21E65FAC00656FC9 /* NuevaCataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9DF5C21E65FAC00656FC9 /* NuevaCataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		296AA3C521BEC11F00B8AAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54DEBFB921C4051300670198 /* HistorialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialController.swift; sourceTree = "<group>"; };
 		54DEBFBB21C40B6200670198 /* InicioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		A1E9DF5C21E65FAC00656FC9 /* NuevaCataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaCataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				2954117B21BEE99F00E34A8B /* NuevaCataController.swift */,
 				54DEBFB921C4051300670198 /* HistorialController.swift */,
 				296AA3BA21BEC11F00B8AAC3 /* Main.storyboard */,
+				A1E9DF5C21E65FAC00656FC9 /* NuevaCataTableViewCell.swift */,
 				2935B8C621C819CE00C25D47 /* HistorialVinoTableViewController.swift */,
 				2935B8C421C816F400C25D47 /* ResultadoController.swift */,
 				2935B8C221C813D700C25D47 /* SeleccionarVinoController.swift */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E9DF5D21E65FAC00656FC9 /* NuevaCataTableViewCell.swift in Sources */,
 				54DEBFBC21C40B6200670198 /* InicioController.swift in Sources */,
 				2935B8C121C7F49600C25D47 /* Vino.swift in Sources */,
 				2954117C21BEE99F00E34A8B /* NuevaCataController.swift in Sources */,

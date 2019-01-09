@@ -16,6 +16,12 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var labelSlider: UILabel!
     
+    @IBOutlet weak var atributoLabel: UILabel!
+    
+    
+  
+    
+    
     var pickerData: [String] = [String]()
     
     var vino: Vino!
