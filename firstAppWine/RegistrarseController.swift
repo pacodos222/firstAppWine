@@ -29,6 +29,8 @@ class RegistrarseController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func seleccionarImagen(sender: UITapGestureRecognizer) {
+    }
 
     /*
     // MARK: - Navigation
