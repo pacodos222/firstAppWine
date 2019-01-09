@@ -9,9 +9,15 @@
 import UIKit
 
 class MenuController: UIViewController {
+    
 
+    @IBOutlet weak var userLabel: UILabel!
+    
+    let dato = NSUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userLabel.text = dato.objectForKey("user") as? String
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
     }

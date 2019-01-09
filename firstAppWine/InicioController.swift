@@ -14,6 +14,7 @@ class InicioController: UIViewController {
     
     @IBOutlet weak var usuarioTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
+    let dato = NSUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,8 @@ class InicioController: UIViewController {
             
             if result.count == 1
             {
-                NSUserDefaults.setValue(usuarioTxt.text, forKey: "user")
+                dato.setObject(usuarioTxt.text, forKey: "user")
+                dato.synchronize()
                 performSegueWithIdentifier("segueLogin", sender: self)
             }
             else
