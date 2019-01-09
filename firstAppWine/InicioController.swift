@@ -43,6 +43,7 @@ class InicioController: UIViewController {
             
             if result.count == 1
             {
+                NSUserDefaults.setValue(usuarioTxt.text, forKey: "user")
                 performSegueWithIdentifier("segueLogin", sender: self)
             }
             else
