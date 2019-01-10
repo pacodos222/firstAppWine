@@ -29,6 +29,8 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var selectedValue = ""
     
+    var celdaMod = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 pickerData = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
@@ -73,33 +75,48 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
          switch selectedValue{
         case "Alcalinity":
             sliderDinamico(5)
+            valorSlider(slider)
+            celdaMod = 0
+            
            
         case "Alcohol":
             sliderDinamico(6)
+             valorSlider(slider)
+            celdaMod = 1
         
          case "Ash":
             sliderDinamico(7)
+             valorSlider(slider)
+            celdaMod = 2
             
          case "Color intensity":
             sliderDinamico(8)
+            valorSlider(slider)
+            celdaMod = 3
             
          case "Flavonoids":
             sliderDinamico(9)
+             valorSlider(slider)
             
          case "Hue":
             sliderDinamico(10)
+             valorSlider(slider)
             
          case "Non flavonoids Phenols":
             sliderDinamico(11)
-
+             valorSlider(slider)
+            
          case "Od280":
             sliderDinamico(12)
+             valorSlider(slider)
 
          case "Proanthocyanins":
             sliderDinamico(13)
+             valorSlider(slider)
 
          case "Proline":
             sliderDinamico(14)
+             valorSlider(slider)
 
 
 
@@ -111,10 +128,10 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     }
     
-    
+   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "AWEQWEQWEQWEQWEQWE"
+        cell.textLabel?.text = "\(slider.value)"
         return cell
     }
     
@@ -123,10 +140,23 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     
+    @IBAction func actualizarTabla(sender: UISlider) {
+        tablaDeMierda(celdaMod)
+    }
+    
+    func tablaDeMierda(celda: Int){
+        let indexPath = NSIndexPath(forRow: celda, inSection: 0)
+         tabla.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
+
+    }
+    
 
     @IBAction func valorSlider(sender: UISlider) {
         labelSlider.text = "\(slider.value)"
+        
     }
+    
+    
     
     func sliderDinamico(maximo : Float){
         slider.value = 0

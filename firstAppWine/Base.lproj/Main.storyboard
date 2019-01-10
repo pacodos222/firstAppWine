@@ -775,6 +775,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-gT-WwB">
                                                 <rect key="frame" x="-2" y="0.0" width="193" height="31"/>
                                                 <connections>
+                                                    <action selector="actualizarTabla:" destination="SBz-f9-fm9" eventType="valueChanged" id="lg0-g3-Nsc"/>
                                                     <action selector="valorSlider:" destination="SBz-f9-fm9" eventType="valueChanged" id="TcK-DP-PNY"/>
                                                 </connections>
                                             </slider>
