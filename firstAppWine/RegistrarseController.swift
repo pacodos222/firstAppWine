@@ -132,6 +132,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
         //Podemos poner una alerta avisando que la rep de contraseña ya está
         //Tambien podemos poner otra alerta avisando de que el user ya está
         
+
         
      
     }
