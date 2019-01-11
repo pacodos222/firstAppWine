@@ -183,7 +183,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return pickerData.count
     }
     
     
