@@ -74,49 +74,95 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
          switch selectedValue{
         case "Alcalinity":
-            sliderDinamico(5)
-            valorSlider(slider)
+            
             celdaMod = 0
+            sliderDinamico(5)
+            
+            valorSlider(slider)
+            
+            scroll(celdaMod)
+        
             
            
         case "Alcohol":
-            sliderDinamico(6)
-             valorSlider(slider)
             celdaMod = 1
+            sliderDinamico(6)
+            valorSlider(slider)
+      
+            scroll(celdaMod)
+            
+
         
          case "Ash":
+            celdaMod = 2
             sliderDinamico(7)
              valorSlider(slider)
-            celdaMod = 2
+            
+            scroll(celdaMod)
+          
+
             
          case "Color intensity":
+            celdaMod = 3
             sliderDinamico(8)
             valorSlider(slider)
-            celdaMod = 3
+            
+            scroll(celdaMod)
+            
+
             
          case "Flavonoids":
+            celdaMod = 4
             sliderDinamico(9)
              valorSlider(slider)
             
+            scroll(celdaMod)
+            
+
+            
          case "Hue":
+             celdaMod = 5
             sliderDinamico(10)
              valorSlider(slider)
+           
+            scroll(celdaMod)
+           
+
             
          case "Non flavonoids Phenols":
+             celdaMod = 6
             sliderDinamico(11)
              valorSlider(slider)
+           
+            scroll(celdaMod)
+            
+
             
          case "Od280":
+            celdaMod = 7
             sliderDinamico(12)
              valorSlider(slider)
+            
+            scroll(celdaMod)
+        
+
 
          case "Proanthocyanins":
+              celdaMod = 8
             sliderDinamico(13)
              valorSlider(slider)
+          
+            scroll(celdaMod)
+            
+
 
          case "Proline":
+            celdaMod = 9
             sliderDinamico(14)
              valorSlider(slider)
+            
+            scroll(celdaMod)
+            
 
 
 
@@ -131,17 +177,20 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "\(slider.value)"
+        cell.textLabel?.text = selectedValue + " \(slider.value)"
+        print(selectedValue)
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
     
     
     @IBAction func actualizarTabla(sender: UISlider) {
         tablaDeMierda(celdaMod)
+        labelSlider.text = "\(slider.value)"
+
     }
     
     func tablaDeMierda(celda: Int){
@@ -150,10 +199,15 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     }
     
+    
+    func scroll(celda: Int){
+        let indexPath = NSIndexPath(forRow: celda, inSection: 0)
+         tabla.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+    }
 
     @IBAction func valorSlider(sender: UISlider) {
-        labelSlider.text = "\(slider.value)"
-        
+
+
     }
     
     
