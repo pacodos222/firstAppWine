@@ -15,10 +15,13 @@ class ResultadoController: UIViewController {
     @IBOutlet weak var imagenCorrecta: UIImageView!
     @IBOutlet weak var lblCorrecta: UILabel!
     
+    var vino : Vino?
+    
+    var comp : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //inicializarVista()
           self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }
 
@@ -27,6 +30,31 @@ class ResultadoController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func inicializarVista(){
+        comp = (vino?.claseEstimada)!
+        switch comp{
+        case "tinto":
+            lblSeleccionado.text = "Vino Tinto"
+            lblCorrecta.text = "Vino Tinto"
+            imagenSeleccionada.image = UIImage(named: "tinto")
+            imagenCorrecta.image = UIImage(named: "tinto")
+            
+        case "blanco":
+            lblSeleccionado.text = "Vino Blanco"
+            lblCorrecta.text = "Vino Blanco"
+            imagenSeleccionada.image = UIImage(named: "blanco")
+            imagenCorrecta.image = UIImage(named: "blanco")
+            
+        case "rosado":
+            lblSeleccionado.text = "Vino Rosado"
+            lblCorrecta.text = "Vino Rosado"
+            imagenSeleccionada.image = UIImage(named: "rosado")
+            imagenCorrecta.image = UIImage(named: "rosado")
+        
+        default:
+            print("ERROR")
+        }
+    }
     
     /*
     // MARK: - Navigation

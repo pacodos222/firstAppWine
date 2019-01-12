@@ -26,6 +26,8 @@ class SeleccionarVinoController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Cada una de las siguientes acciones están asociadas al botón Seleccionar de la vista
+    
     @IBAction func seleccionarTinto(sender: UIButton) {
         vino?.claseEstimada = "tinto"
         vino?.claseReal = "tinto"
@@ -83,7 +85,7 @@ class SeleccionarVinoController: UIViewController {
 
     }
     
-    
+    //muestran la cantidad que hay en la BD
     func comprobarVinoBD(){
         print("vamos a comprobar si esta almacenado el vino")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -116,6 +118,15 @@ class SeleccionarVinoController: UIViewController {
 
     }
 
+    //Metodo que se acciona cuando se usa un segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "seleccionarTintoSegue" || segue.identifier == "seleccionarRosadoSegue" || segue.identifier == "seleccionarBlancoSegue"){
+            let controller = segue.destinationViewController as! ResultadoController
+            controller.vino = vino
+
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
