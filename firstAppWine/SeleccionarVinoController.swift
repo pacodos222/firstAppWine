@@ -19,8 +19,6 @@ class SeleccionarVinoController: UIViewController {
         super.viewDidLoad()
         
           self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
-        
-        print("\(vino)" + "AAAAAAAAA")
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +31,7 @@ class SeleccionarVinoController: UIViewController {
         vino?.claseReal = "tinto"
         almacenarVinoBD()
         comprobarVinoBD()
+        comprobarCataBD()
 
     }
     
@@ -41,6 +40,7 @@ class SeleccionarVinoController: UIViewController {
         vino?.claseReal = "rosado"
         almacenarVinoBD()
         comprobarVinoBD()
+        comprobarCataBD()
 
     }
     
@@ -49,13 +49,16 @@ class SeleccionarVinoController: UIViewController {
         vino?.claseReal = "blanco"
         almacenarVinoBD()
         comprobarVinoBD()
+        comprobarCataBD()
     }
     
     func almacenarVinoBD(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entidadVino = NSEntityDescription.entityForName("Vino", inManagedObjectContext: managedContext)
+        let entidadCata = NSEntityDescription.entityForName("Cata", inManagedObjectContext: managedContext)
         let wine = Vino(entity: entidadVino!, insertIntoManagedObjectContext: managedContext)
+        let cata = Cata(entity: entidadCata!, insertIntoManagedObjectContext: managedContext)
         wine.setValue(vino?.alcalinityOfAsh, forKey: "alcalinityOfAsh")
         wine.setValue(vino?.alcohol, forKey: "alcohol")
         wine.setValue(vino?.ash, forKey: "ash")
@@ -68,29 +71,44 @@ class SeleccionarVinoController: UIViewController {
         wine.setValue(vino?.od280, forKey: "od280")
         wine.setValue(vino?.proanthocyanins, forKey: "proanthocyanins")
         wine.setValue(vino?.proline, forKey: "proline")
+        cata.setValue(true, forKey: "resultado")
+        cata.setValue("12/1/19", forKey: "fecha")
 
         do{
             try managedContext.save()
         }
         catch{
-            print("DANGER in Fecha")
+            print("DANGER in Almacenar")
         }
 
     }
     
     
     func comprobarVinoBD(){
-        print("vamos a comprobar si esta almacenado...")
+        print("vamos a comprobar si esta almacenado el vino")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Vino")
         do{
             let results = try managedContext.executeFetchRequest(fetchRequest)
-            /*for p in results {
-                listaVinos.append(p.valueForKey("username") as! String)
-            }
-            print(listaVinos)*/
-            print(results)
+            //print(results)
+            print(results.count)
+        }
+        catch{
+            print("FAIL")
+        }
+
+    }
+    
+    func comprobarCataBD(){
+        print("vamos a comprobar si esta almacenado la Cata")
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Cata")
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            //print(results)
+            print(results.count)
         }
         catch{
             print("FAIL")
