@@ -9,7 +9,7 @@
 import UIKit
 
 class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var slider: UISlider!
     
     @IBOutlet weak var picker: UIPickerView!
@@ -20,7 +20,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var tabla: UITableView!
     
-   
+    
     
     
     var pickerData: [String] = [String]()
@@ -32,24 +32,24 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var celdaMod = 0
     
     
-   
+    
     var data = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                pickerData = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
+        pickerData = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
         
         self.picker.delegate = self
         
         self.picker.dataSource = self
         
         labelSlider.text = "0"
-
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
-      
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -166,9 +166,9 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
     }
     
-   
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
         print(slider.value)
         //data[indexPath.item] = selectedValue + " \(slider.value)"
@@ -186,26 +186,26 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         tablaDeMierda(celdaMod)
         //labelSlider.text = "\(slider.value)"
         data[celdaMod] = selectedValue + " \(slider.value)"
-
+        
     }
     
     func tablaDeMierda(celda: Int){
         let indexPath = NSIndexPath(forRow: celda, inSection: 0)
-         tabla.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
-
+        tabla.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
+        
     }
     
     
     func scroll(celda: Int){
         let indexPath = NSIndexPath(forRow: celda, inSection: 0)
-         tabla.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+        tabla.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
     }
-
+    
     @IBAction func valorSlider(sender: UISlider) {
         
-
+        
     }
-
+    
     
     
     
@@ -213,16 +213,16 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         slider.value = 0
         slider.maximumValue = maximo
-    
+        
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
