@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
 
@@ -25,11 +26,13 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var pickerData: [String] = [String]()
     
-    var vino: Vino!
+    var vino : Vino?
     
     var selectedValue = ""
     
     var celdaMod = 0
+    
+    var valorAux = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +45,25 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         labelSlider.text = "0"
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        inicializarVino()
+      
+        
+       
         
         
+        
+    }
+    
+    func inicializarVino(){
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("Vino", inManagedObjectContext: managedContext)
+        
+        vino = Vino(entity: entity!, insertIntoManagedObjectContext: managedContext)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,9 +97,8 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             
             celdaMod = 0
             sliderDinamico(5)
-            
             valorSlider(slider)
-            
+            vino?.alcalinityOfAsh = slider.value
             scroll(celdaMod)
         
             
@@ -88,7 +107,8 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             celdaMod = 1
             sliderDinamico(6)
             valorSlider(slider)
-      
+            print(slider.value)
+            vino?.alcohol = slider.value
             scroll(celdaMod)
             
 
@@ -97,7 +117,6 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             celdaMod = 2
             sliderDinamico(7)
              valorSlider(slider)
-            
             scroll(celdaMod)
           
 
@@ -106,7 +125,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             celdaMod = 3
             sliderDinamico(8)
             valorSlider(slider)
-            
+            vino?.colorIntensitiy = slider.value
             scroll(celdaMod)
             
 
@@ -115,7 +134,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             celdaMod = 4
             sliderDinamico(9)
              valorSlider(slider)
-            
+            vino?.flavonoids = slider.value
             scroll(celdaMod)
             
 
@@ -124,16 +143,15 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
              celdaMod = 5
             sliderDinamico(10)
              valorSlider(slider)
-           
+             vino?.hue = slider.value
             scroll(celdaMod)
-           
 
             
          case "Non flavonoids Phenols":
              celdaMod = 6
             sliderDinamico(11)
              valorSlider(slider)
-           
+             vino?.nonFlavonoidsPhenols = slider.value
             scroll(celdaMod)
             
 
@@ -142,7 +160,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             celdaMod = 7
             sliderDinamico(12)
              valorSlider(slider)
-            
+            vino?.nonFlavonoidsPhenols = slider.value
             scroll(celdaMod)
         
 
@@ -151,7 +169,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
               celdaMod = 8
             sliderDinamico(13)
              valorSlider(slider)
-          
+              vino?.nonFlavonoidsPhenols = slider.value
             scroll(celdaMod)
             
 
@@ -160,7 +178,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             celdaMod = 9
             sliderDinamico(14)
              valorSlider(slider)
-            
+            vino?.proline = slider.value
             scroll(celdaMod)
             
 
@@ -171,6 +189,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         default:
             print("ERROR")
         }
+       
 
     }
     
@@ -178,10 +197,89 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
         cell.textLabel?.text = selectedValue + " \(slider.value)"
-        print(selectedValue)
+        
+        switch selectedValue{
+        case "Alcalinity":
+            
+            
+            vino?.alcalinityOfAsh = slider.value
+            
+            
+            
+            
+        case "Alcohol":
+            
+            vino?.alcohol = slider.value
+            
+            
+            
+            
+        case "Ash":
+            vino?.ash = slider.value
+            
+            
+            
+        case "Color intensity":
+            
+            vino?.colorIntensitiy = slider.value
+           
+            
+            
+            
+        case "Flavonoids":
+           
+            vino?.flavonoids = slider.value
+        
+            
+            
+            
+        case "Hue":
+           
+            vino?.hue = slider.value
+          
+            
+            
+        case "Non flavonoids Phenols":
+            
+            vino?.nonFlavonoidsPhenols = slider.value
+           
+            
+            
+            
+        case "Od280":
+            vino?.nonFlavonoidsPhenols = slider.value
+          
+            
+            
+            
+        case "Proanthocyanins":
+            
+            vino?.nonFlavonoidsPhenols = slider.value
+           
+            
+            
+        case "Proline":
+            
+            vino?.proline = slider.value
+           
+            
+            
+            
+            
+            
+            
+        default:
+            print("ERROR")
+        }
+        
+
+        
+        print(vino)
         return cell
+        
     }
     
+   
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pickerData.count
     }
@@ -206,7 +304,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
 
     @IBAction func valorSlider(sender: UISlider) {
-
+        //valorAux = slider.value
 
     }
     
@@ -217,6 +315,16 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         slider.maximumValue = maximo
     
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as! SeleccionarVinoController
+        controller.vino = vino
+        
+    }
+    
+  
+    
+    
     /*
     // MARK: - Navigation
 

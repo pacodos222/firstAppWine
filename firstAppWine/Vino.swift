@@ -13,5 +13,10 @@ import CoreData
 class Vino: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
+    
+    
+    
+    
+    
 
 }
