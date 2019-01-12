@@ -11,10 +11,15 @@ import UIKit
 class SeleccionarVinoController: UIViewController {
 
     @IBOutlet weak var labelNuevaCata: UILabel!
+    
+    var vino : Vino?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
           self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        
+        print("\(vino)" + "AAAAAAAAA")
     }
 
     override func didReceiveMemoryWarning() {
