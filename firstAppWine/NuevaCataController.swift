@@ -20,7 +20,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var tabla: UITableView!
     
-  
+   
     
     
     var pickerData: [String] = [String]()
@@ -30,6 +30,10 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var selectedValue = ""
     
     var celdaMod = 0
+    
+    
+   
+    var data = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +46,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         labelSlider.text = "0"
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
-        
+      
         
     }
 
@@ -72,113 +76,104 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         selectedValue = pickerData[row]
         //pickerData[picker.selectedRowInComponent(picker.selectedRowInComponent(row))]
         
-         switch selectedValue{
+        
+        switch selectedValue{
         case "Alcalinity":
             
             celdaMod = 0
             sliderDinamico(5)
-            
+            print(slider.value)
             valorSlider(slider)
-            
             scroll(celdaMod)
-        
             
-           
+            
+            
         case "Alcohol":
             celdaMod = 1
             sliderDinamico(6)
             valorSlider(slider)
-      
             scroll(celdaMod)
+            print(slider.value)
             
-
-        
-         case "Ash":
+            
+            
+            
+        case "Ash":
             celdaMod = 2
             sliderDinamico(7)
-             valorSlider(slider)
-            
+            valorSlider(slider)
             scroll(celdaMod)
-          
-
             
-         case "Color intensity":
+            
+            
+        case "Color intensity":
             celdaMod = 3
             sliderDinamico(8)
             valorSlider(slider)
-            
             scroll(celdaMod)
             
-
             
-         case "Flavonoids":
+            
+        case "Flavonoids":
             celdaMod = 4
             sliderDinamico(9)
-             valorSlider(slider)
-            
+            valorSlider(slider)
             scroll(celdaMod)
             
-
             
-         case "Hue":
-             celdaMod = 5
+            
+        case "Hue":
+            celdaMod = 5
             sliderDinamico(10)
-             valorSlider(slider)
-           
+            valorSlider(slider)
             scroll(celdaMod)
-           
-
             
-         case "Non flavonoids Phenols":
-             celdaMod = 6
+            
+            
+        case "Non flavonoids Phenols":
+            celdaMod = 6
             sliderDinamico(11)
-             valorSlider(slider)
-           
+            valorSlider(slider)
             scroll(celdaMod)
             
-
             
-         case "Od280":
+            
+        case "Od280":
             celdaMod = 7
             sliderDinamico(12)
-             valorSlider(slider)
-            
+            valorSlider(slider)
             scroll(celdaMod)
-        
-
-
-         case "Proanthocyanins":
-              celdaMod = 8
+            
+            
+            
+        case "Proanthocyanins":
+            celdaMod = 8
             sliderDinamico(13)
-             valorSlider(slider)
-          
+            valorSlider(slider)
             scroll(celdaMod)
             
-
-
-         case "Proline":
+            
+            
+        case "Proline":
             celdaMod = 9
             sliderDinamico(14)
-             valorSlider(slider)
-            
+            valorSlider(slider)
             scroll(celdaMod)
             
-
-
-
-
-
         default:
             print("ERROR")
         }
-
+        
     }
     
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
-        cell.textLabel?.text = selectedValue + " \(slider.value)"
-        print(selectedValue)
+        print(slider.value)
+        //data[indexPath.item] = selectedValue + " \(slider.value)"
+        cell.textLabel?.text = data[indexPath.item]
+        
         return cell
     }
     
@@ -189,7 +184,8 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBAction func actualizarTabla(sender: UISlider) {
         tablaDeMierda(celdaMod)
-        labelSlider.text = "\(slider.value)"
+        //labelSlider.text = "\(slider.value)"
+        data[celdaMod] = selectedValue + " \(slider.value)"
 
     }
     
@@ -206,13 +202,15 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
 
     @IBAction func valorSlider(sender: UISlider) {
-
+        
 
     }
+
     
     
     
     func sliderDinamico(maximo : Float){
+        
         slider.value = 0
         slider.maximumValue = maximo
     
