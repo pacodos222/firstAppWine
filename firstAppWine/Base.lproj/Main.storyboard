@@ -453,6 +453,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                         <state key="normal" title="&lt;"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="BYZ-38-t0r" kind="show" identifier="backMenuSegue" id="fA9-nj-Pa4"/>
                                                         </connections>
@@ -531,7 +534,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <segue destination="nhK-S9-mxa" kind="show" identifier="tintoHistorialSegue" id="snl-Oe-iGG"/>
@@ -597,7 +600,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <segue destination="nhK-S9-mxa" kind="show" identifier="rosadoHistorialSegue" id="FAx-nz-t83"/>
@@ -662,7 +665,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <segue destination="nhK-S9-mxa" kind="show" identifier="blancoHistorialSegue" id="72T-PL-tVi"/>
@@ -869,14 +872,15 @@
                                 <rect key="frame" x="0.0" y="35" width="320" height="525"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ik7-MX-zvL">
-                                        <rect key="frame" x="15" y="0.0" width="290" height="32"/>
+                                        <rect key="frame" x="15" y="0.0" width="290" height="33"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhH-gg-g8k">
-                                                <rect key="frame" x="0.0" y="1" width="38" height="30"/>
+                                                <rect key="frame" x="0.0" y="1" width="38" height="31"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="9nb-yk-0AN"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                 <state key="normal" title="&lt;"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
@@ -886,7 +890,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg5-9J-Ogy">
-                                                <rect key="frame" x="48" y="0.0" width="242" height="32"/>
+                                                <rect key="frame" x="48" y="0.0" width="242" height="33"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Nueva cata">
                                                         <attributes>
@@ -906,7 +910,7 @@
                                         </constraints>
                                     </stackView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-Gg-CRI">
-                                        <rect key="frame" x="52" y="33" width="216" height="176"/>
+                                        <rect key="frame" x="52" y="34" width="216" height="175"/>
                                     </pickerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-nm-gX4">
                                         <rect key="frame" x="25" y="210" width="270" height="30"/>
@@ -951,6 +955,9 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="SBz-f9-fm9" id="0VP-2g-0hS"/>
                                             <outlet property="delegate" destination="SBz-f9-fm9" id="eik-Lk-Vfl"/>
@@ -958,13 +965,12 @@
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDB-9h-T8F">
                                         <rect key="frame" x="115" y="490" width="91" height="35"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="xnv-Wf-9OD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                         <state key="normal" title="Siguiente">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
@@ -1025,17 +1031,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-NN-rKv">
-                                <rect key="frame" x="16" y="35" width="288" height="504"/>
+                                <rect key="frame" x="16" y="35" width="288" height="505"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OW8-DO-RQb">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="33"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-mI-iiW">
-                                                <rect key="frame" x="0.0" y="1" width="38" height="30"/>
+                                                <rect key="frame" x="0.0" y="1" width="38" height="31"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="0Jd-bC-hUV"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                 <state key="normal" title="&lt;"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
@@ -1045,7 +1052,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFF-Iz-8Yh">
-                                                <rect key="frame" x="48" y="0.0" width="240" height="32"/>
+                                                <rect key="frame" x="48" y="0.0" width="240" height="33"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Nueva cata">
                                                         <attributes>
@@ -1065,7 +1072,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pJA-eB-BpU">
-                                        <rect key="frame" x="12" y="77" width="264" height="113"/>
+                                        <rect key="frame" x="12" y="78" width="264" height="113"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tinto" translatesAutoresizingMaskIntoConstraints="NO" id="iuI-3C-mSc">
                                                 <rect key="frame" x="0.0" y="1" width="100" height="112"/>
@@ -1090,10 +1097,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djg-Kl-XYp">
                                                         <rect key="frame" x="0.0" y="46" width="144" height="35"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                                         <state key="normal" title="Seleccionar">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
@@ -1114,7 +1120,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7bZ-nN-HJ9">
-                                        <rect key="frame" x="10" y="235" width="268" height="112"/>
+                                        <rect key="frame" x="10" y="236" width="268" height="112"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rosado" translatesAutoresizingMaskIntoConstraints="NO" id="Exf-RM-0qK">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
@@ -1145,10 +1151,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPS-9z-bh9">
                                                         <rect key="frame" x="0.0" y="46" width="144" height="35"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                                         <state key="normal" title="Seleccionar">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
@@ -1178,7 +1183,7 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ygv-aA-HVp">
-                                        <rect key="frame" x="12" y="392" width="264" height="112"/>
+                                        <rect key="frame" x="12" y="393" width="264" height="112"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blanco" translatesAutoresizingMaskIntoConstraints="NO" id="4Z5-4d-Ht3">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
@@ -1203,10 +1208,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-71-X3p">
                                                         <rect key="frame" x="0.0" y="46" width="144" height="35"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                                         <state key="normal" title="Seleccionar">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
@@ -1445,8 +1449,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gqt-Qv-h5Z"/>
+        <segue reference="XKi-4k-jol"/>
         <segue reference="y5Y-xK-dhZ"/>
-        <segue reference="y4J-MM-C8i"/>
         <segue reference="M5Q-G7-cei"/>
         <segue reference="5ci-wx-42i"/>
         <segue reference="snl-Oe-iGG"/>
