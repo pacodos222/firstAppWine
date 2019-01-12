@@ -22,6 +22,7 @@ class ResultadoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //inicializarVista()
+        print("\(vino)"+"Aaaaaa")
           self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }
 

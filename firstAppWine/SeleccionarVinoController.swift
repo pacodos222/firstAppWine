@@ -29,29 +29,29 @@ class SeleccionarVinoController: UIViewController {
     //Cada una de las siguientes acciones están asociadas al botón Seleccionar de la vista
     
     @IBAction func seleccionarTinto(sender: UIButton) {
-        vino?.claseEstimada = "tinto"
+      /*  vino?.claseEstimada = "tinto"
         vino?.claseReal = "tinto"
         almacenarVinoBD()
         comprobarVinoBD()
-        comprobarCataBD()
+        comprobarCataBD()*/
 
     }
     
     @IBAction func seleccionarRosado(sender: UIButton) {
-        vino?.claseEstimada = "rosado"
+       /* vino?.claseEstimada = "rosado"
         vino?.claseReal = "rosado"
         almacenarVinoBD()
         comprobarVinoBD()
-        comprobarCataBD()
+        comprobarCataBD()*/
 
     }
     
     @IBAction func seleccionarBlanco(sender: UIButton) {
-        vino?.claseEstimada = "blanco"
+        /*vino?.claseEstimada = "blanco"
         vino?.claseReal = "blanco"
         almacenarVinoBD()
         comprobarVinoBD()
-        comprobarCataBD()
+        comprobarCataBD()*/
     }
     
     func almacenarVinoBD(){
@@ -120,11 +120,43 @@ class SeleccionarVinoController: UIViewController {
 
     //Metodo que se acciona cuando se usa un segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "seleccionarTintoSegue" || segue.identifier == "seleccionarRosadoSegue" || segue.identifier == "seleccionarBlancoSegue"){
+        
+        if (segue.identifier == "seleccionarTintoSegue" ){
+            vino?.claseEstimada = "tinto"
+            vino?.claseReal = "tinto"
+            almacenarVinoBD()
+            comprobarVinoBD()
+            comprobarCataBD()
             let controller = segue.destinationViewController as! ResultadoController
             controller.vino = vino
-
         }
+        if ( segue.identifier == "seleccionarRosadoSegue" ){
+            vino?.claseEstimada = "rosado"
+            vino?.claseReal = "rosado"
+            almacenarVinoBD()
+            comprobarVinoBD()
+            comprobarCataBD()
+            let controller = segue.destinationViewController as! ResultadoController
+            controller.vino = vino
+        }
+        if ( segue.identifier == "seleccionarBlancoSegue"){
+            vino?.claseEstimada = "blanco"
+            vino?.claseReal = "blanco"
+            almacenarVinoBD()
+            comprobarVinoBD()
+            comprobarCataBD()
+
+            
+            let controller = segue.destinationViewController as! ResultadoController
+            controller.vino = vino
+        }
+
+    
+        
+            
+        
+
+        
     }
     
     /*
