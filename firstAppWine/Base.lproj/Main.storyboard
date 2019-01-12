@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17G3025" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hcG-TM-wkl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hcG-TM-wkl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -306,68 +306,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hUU-jd-dOF">
-                                <rect key="frame" x="26" y="20" width="268" height="538"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uQ7-gq-Vvw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cursoVinos" translatesAutoresizingMaskIntoConstraints="NO" id="A76-e0-B2m">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="410"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="410" id="a3V-rX-Bz3"/>
-                                            <constraint firstAttribute="width" constant="268" id="t7c-il-cQ1"/>
+                                            <constraint firstAttribute="height" constant="400" id="QCP-za-fFY"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-Oi-yTQ">
-                                        <rect key="frame" x="86" y="410" width="96" height="68"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-ut-pPb">
+                                        <rect key="frame" x="85" y="400" width="150" height="150"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-xq-JiX">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X6O-Oi-yTQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="68"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-xq-JiX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="96" id="6Eb-Bv-acg"/>
+                                                            <constraint firstAttribute="height" constant="30" id="Nh8-m2-oD8"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="e4c-by-jcy"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="6Eb-Bv-acg"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9t2-XB-W4f">
+                                                        <rect key="frame" x="0.0" y="38" width="150" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cyZ-6g-Gf9"/>
+                                                            <constraint firstAttribute="height" constant="30" id="sOi-hG-n0h"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yip-Jn-A43">
+                                                <rect key="frame" x="0.0" y="68" width="150" height="82"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-P4-eFW">
+                                                        <rect key="frame" x="51" y="0.0" width="49" height="52"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="49" id="Iga-tF-0rz"/>
+                                                            <constraint firstAttribute="height" constant="52" id="o1G-KR-ZlO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                        <state key="normal" title="Login">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="autentificacion" destination="hcG-TM-wkl" eventType="touchUpInside" id="YD4-dt-oCE"/>
+                                                            <segue destination="BYZ-38-t0r" kind="show" identifier="segueLogin" id="txL-7O-yGy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-Ag-wLo">
+                                                        <rect key="frame" x="0.0" y="52" width="150" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="78" id="S6P-Zm-qxk"/>
+                                                            <constraint firstAttribute="height" constant="30" id="qwD-3w-qz5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                        <state key="normal" title="Registrarse">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="S6P-Zm-qxk"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <connections>
+                                                            <segue destination="5mM-fc-cDs" kind="show" id="J6a-qg-ntr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="96" id="6Eb-Bv-acg"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Nh8-m2-oD8"/>
+                                                    <constraint firstItem="aRq-Ag-wLo" firstAttribute="leading" secondItem="yip-Jn-A43" secondAttribute="leading" id="zdi-xE-CJ4"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9t2-XB-W4f">
-                                                <rect key="frame" x="0.0" y="38" width="96" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="96" id="mqn-gO-IaQ"/>
-                                                    <constraint firstAttribute="height" constant="30" id="sOi-hG-n0h"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="UUa-C3-dLa"/>
+                                        </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-P4-eFW">
-                                        <rect key="frame" x="115" y="478" width="38" height="30"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="autentificacion" destination="hcG-TM-wkl" eventType="touchUpInside" id="YD4-dt-oCE"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="segueLogin" id="txL-7O-yGy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-Ag-wLo">
-                                        <rect key="frame" x="95" y="508" width="78" height="30"/>
-                                        <state key="normal" title="Registrarse">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="5mM-fc-cDs" kind="show" id="J6a-qg-ntr"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="tht-bR-MH1"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hUU-jd-dOF" firstAttribute="centerX" secondItem="EAQ-l6-1ew" secondAttribute="centerX" id="RbB-yu-F4S"/>
-                            <constraint firstItem="hUU-jd-dOF" firstAttribute="top" secondItem="P9l-xc-nCn" secondAttribute="bottom" id="X0Q-7D-9tz"/>
-                            <constraint firstItem="hUU-jd-dOF" firstAttribute="leading" secondItem="EAQ-l6-1ew" secondAttribute="leadingMargin" constant="10" id="aU9-u7-GRj"/>
-                            <constraint firstItem="Wsv-ie-GX3" firstAttribute="top" secondItem="hUU-jd-dOF" secondAttribute="bottom" constant="10" id="nz3-Zc-C5r"/>
+                            <constraint firstAttribute="trailing" secondItem="uQ7-gq-Vvw" secondAttribute="trailing" id="CPl-BS-zUx"/>
+                            <constraint firstItem="uQ7-gq-Vvw" firstAttribute="leading" secondItem="EAQ-l6-1ew" secondAttribute="leading" id="Me0-60-9ds"/>
+                            <constraint firstItem="uQ7-gq-Vvw" firstAttribute="top" secondItem="EAQ-l6-1ew" secondAttribute="top" id="MeS-0n-nci"/>
+                            <constraint firstItem="uQ7-gq-Vvw" firstAttribute="bottom" secondItem="Wsv-ie-GX3" secondAttribute="top" id="Oq3-iY-BOy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Oq3-iY-BOy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -377,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEK-01-ef1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720" y="-980"/>
+            <point key="canvasLocation" x="713" y="-964"/>
         </scene>
         <!--Historial Controller-->
         <scene sceneID="IOr-il-r5S">
@@ -1367,11 +1411,11 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5ci-wx-42i"/>
+        <segue reference="snl-Oe-iGG"/>
         <segue reference="gqt-Qv-h5Z"/>
         <segue reference="y5Y-xK-dhZ"/>
-        <segue reference="XKi-4k-jol"/>
-        <segue reference="snl-Oe-iGG"/>
-        <segue reference="5ci-wx-42i"/>
+        <segue reference="txL-7O-yGy"/>
         <segue reference="M5Q-G7-cei"/>
     </inferredMetricsTieBreakers>
 </document>
