@@ -435,260 +435,270 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rig-uK-s4S">
-                                <rect key="frame" x="15" y="13" width="290" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T6W-RS-1dx">
+                                <rect key="frame" x="20" y="44" width="290" height="491"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pM-BW-aOA">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rig-uK-s4S">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxY-QQ-hvd">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="45" id="8ps-FU-shX"/>
-                                                    <constraint firstAttribute="height" constant="45" id="mVy-wv-rKs"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                                <state key="normal" title="&lt;"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backMenuSegue" id="fA9-nj-Pa4"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-Em-aon">
-                                                <rect key="frame" x="45" y="0.0" width="245" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="245" id="jt8-XX-GbF"/>
-                                                    <constraint firstAttribute="height" constant="45" id="r72-JO-Pwu"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Historial">
-                                                        <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="38" name="Chalkduster"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            <integer key="NSUnderline" value="1"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="gln-aU-1SA">
-                                <rect key="frame" x="8" y="114" width="290" height="426"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-d4-wAn" userLabel="VinoTinto">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="112"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tinto" translatesAutoresizingMaskIntoConstraints="NO" id="EcK-Ys-BUS">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="aD3-4j-sf7"/>
-                                                    <constraint firstAttribute="height" constant="112" id="xdz-RO-Rho"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-ps-Dd3">
-                                                <rect key="frame" x="100" y="0.0" width="190" height="112"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="0pM-BW-aOA">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vino tinto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPE-BW-tWR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="77"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxY-QQ-hvd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="190" id="VaH-pg-Nj0"/>
+                                                            <constraint firstAttribute="width" constant="45" id="Mcv-zw-ocf"/>
+                                                            <constraint firstAttribute="height" constant="45" id="mVy-wv-rKs"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                        <state key="normal" title="&lt;"/>
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="show" identifier="backMenuSegue" id="fA9-nj-Pa4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-Em-aon">
+                                                        <rect key="frame" x="80" y="0.0" width="210" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="r72-JO-Pwu"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Historial">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="38" name="Chalkduster"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <integer key="NSUnderline" value="1"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQ6-Fh-Feh">
-                                                        <rect key="frame" x="0.0" y="77" width="190" height="35"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-xo-25g">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="35" id="CvI-bL-1Xb"/>
-                                                                    <constraint firstAttribute="width" constant="155" id="MZa-pv-cxr"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0X-G0-IhR">
-                                                                <rect key="frame" x="155" y="0.0" width="35" height="35"/>
-                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="35" id="Jyb-gw-q0E"/>
-                                                                    <constraint firstAttribute="height" constant="35" id="Qex-A7-0Ir"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
-                                                                <state key="normal" title="&gt;">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <segue destination="nhK-S9-mxa" kind="show" identifier="tintoHistorialSegue" id="snl-Oe-iGG"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="190" id="GvW-AC-w16"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="H6l-nr-ihU"/>
-                                                    <constraint firstAttribute="width" constant="190" id="T9A-jD-v2E"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="290" id="Plw-LP-TX7"/>
-                                            <constraint firstAttribute="height" constant="112" id="qtX-q1-fWK"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-Kj-Xex" userLabel="VinoRosado">
-                                        <rect key="frame" x="0.0" y="157" width="290" height="112"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rosado" translatesAutoresizingMaskIntoConstraints="NO" id="Exj-mI-kiA">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="T62-0y-793"/>
-                                                    <constraint firstAttribute="height" constant="112" id="axL-bP-cIG"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ow-Lg-dog">
-                                                <rect key="frame" x="100" y="0.0" width="190" height="112"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vino rosado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nn-5A-eoS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="77"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="190" id="Yn0-hW-U7H"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6e-dh-eMj">
-                                                        <rect key="frame" x="0.0" y="77" width="190" height="35"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkq-gx-QyJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="155" id="Sq2-PA-UiL"/>
-                                                                    <constraint firstAttribute="height" constant="35" id="m6S-EE-cFM"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdR-dq-amD">
-                                                                <rect key="frame" x="155" y="0.0" width="35" height="35"/>
-                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
-                                                                <state key="normal" title="&gt;">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <segue destination="nhK-S9-mxa" kind="show" identifier="rosadoHistorialSegue" id="FAx-nz-t83"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="35" id="NaS-XM-RTm"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="jCE-y2-aEC"/>
-                                                            <constraint firstAttribute="width" constant="190" id="ydJ-j3-1ZX"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O11-51-bf5" userLabel="VinoBlanco">
-                                        <rect key="frame" x="0.0" y="314" width="290" height="112"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blanco" translatesAutoresizingMaskIntoConstraints="NO" id="TDW-Ju-2Zr">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="112" id="OTV-Do-mrC"/>
-                                                    <constraint firstAttribute="width" constant="100" id="yv2-eX-s6h"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-II-FWi">
-                                                <rect key="frame" x="100" y="0.0" width="190" height="112"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vino blanco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-FC-2Sh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="77"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="77" id="BA8-0h-1I4"/>
-                                                            <constraint firstAttribute="width" constant="190" id="RfQ-QA-b77"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsP-DL-EcA">
-                                                        <rect key="frame" x="0.0" y="77" width="190" height="35"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-IT-yff">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="155" id="tlS-HI-kl0"/>
-                                                                    <constraint firstAttribute="height" constant="35" id="v8J-jj-uue"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-If-PNM">
-                                                                <rect key="frame" x="155" y="0.0" width="35" height="35"/>
-                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="35" id="3aR-R8-BhQ"/>
-                                                                    <constraint firstAttribute="height" constant="35" id="wTD-2N-JKm"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
-                                                                <state key="normal" title="&gt;">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                </state>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <segue destination="nhK-S9-mxa" kind="show" identifier="blancoHistorialSegue" id="72T-PL-tVi"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="190" id="sfl-UV-KyO"/>
-                                                        </constraints>
-                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="290" id="mh1-JY-6uL"/>
-                                            <constraint firstAttribute="height" constant="112" id="ult-hb-xpI"/>
+                                            <constraint firstItem="0pM-BW-aOA" firstAttribute="top" secondItem="Rig-uK-s4S" secondAttribute="top" id="OAh-jR-5XT"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="gln-aU-1SA">
+                                        <rect key="frame" x="0.0" y="65" width="290" height="426"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-d4-wAn" userLabel="VinoTinto">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="112"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tinto" translatesAutoresizingMaskIntoConstraints="NO" id="EcK-Ys-BUS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="aD3-4j-sf7"/>
+                                                            <constraint firstAttribute="height" constant="112" id="xdz-RO-Rho"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-ps-Dd3">
+                                                        <rect key="frame" x="100" y="0.0" width="190" height="112"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vino tinto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPE-BW-tWR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="77"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="190" id="VaH-pg-Nj0"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQ6-Fh-Feh">
+                                                                <rect key="frame" x="0.0" y="77" width="190" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-xo-25g">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="35" id="CvI-bL-1Xb"/>
+                                                                            <constraint firstAttribute="width" constant="155" id="MZa-pv-cxr"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0X-G0-IhR">
+                                                                        <rect key="frame" x="155" y="0.0" width="35" height="35"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="35" id="Jyb-gw-q0E"/>
+                                                                            <constraint firstAttribute="height" constant="35" id="Qex-A7-0Ir"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                                                        <state key="normal" title="&gt;">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <segue destination="nhK-S9-mxa" kind="show" identifier="tintoHistorialSegue" id="snl-Oe-iGG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="190" id="GvW-AC-w16"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="H6l-nr-ihU"/>
+                                                            <constraint firstAttribute="width" constant="190" id="T9A-jD-v2E"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="290" id="Plw-LP-TX7"/>
+                                                    <constraint firstAttribute="height" constant="112" id="qtX-q1-fWK"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-Kj-Xex" userLabel="VinoRosado">
+                                                <rect key="frame" x="0.0" y="157" width="290" height="112"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rosado" translatesAutoresizingMaskIntoConstraints="NO" id="Exj-mI-kiA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="T62-0y-793"/>
+                                                            <constraint firstAttribute="height" constant="112" id="axL-bP-cIG"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ow-Lg-dog">
+                                                        <rect key="frame" x="100" y="0.0" width="190" height="112"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vino rosado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nn-5A-eoS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="77"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="190" id="Yn0-hW-U7H"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6e-dh-eMj">
+                                                                <rect key="frame" x="0.0" y="77" width="190" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkq-gx-QyJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="155" id="Sq2-PA-UiL"/>
+                                                                            <constraint firstAttribute="height" constant="35" id="m6S-EE-cFM"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdR-dq-amD">
+                                                                        <rect key="frame" x="155" y="0.0" width="35" height="35"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                                                        <state key="normal" title="&gt;">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <segue destination="nhK-S9-mxa" kind="show" identifier="rosadoHistorialSegue" id="FAx-nz-t83"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="NaS-XM-RTm"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="jCE-y2-aEC"/>
+                                                                    <constraint firstAttribute="width" constant="190" id="ydJ-j3-1ZX"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O11-51-bf5" userLabel="VinoBlanco">
+                                                <rect key="frame" x="0.0" y="314" width="290" height="112"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blanco" translatesAutoresizingMaskIntoConstraints="NO" id="TDW-Ju-2Zr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="112"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="112" id="OTV-Do-mrC"/>
+                                                            <constraint firstAttribute="width" constant="100" id="yv2-eX-s6h"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-II-FWi">
+                                                        <rect key="frame" x="100" y="0.0" width="190" height="112"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vino blanco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-FC-2Sh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="77"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="77" id="BA8-0h-1I4"/>
+                                                                    <constraint firstAttribute="width" constant="190" id="RfQ-QA-b77"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsP-DL-EcA">
+                                                                <rect key="frame" x="0.0" y="77" width="190" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-IT-yff">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="155" id="tlS-HI-kl0"/>
+                                                                            <constraint firstAttribute="height" constant="35" id="v8J-jj-uue"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws9-If-PNM">
+                                                                        <rect key="frame" x="155" y="0.0" width="35" height="35"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="35" id="3aR-R8-BhQ"/>
+                                                                            <constraint firstAttribute="height" constant="35" id="wTD-2N-JKm"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                                                        <state key="normal" title="&gt;">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="5"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <segue destination="nhK-S9-mxa" kind="show" identifier="blancoHistorialSegue" id="72T-PL-tVi"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="190" id="sfl-UV-KyO"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="290" id="mh1-JY-6uL"/>
+                                                    <constraint firstAttribute="height" constant="112" id="ult-hb-xpI"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="426" id="nbB-EU-vvW"/>
+                                            <constraint firstAttribute="width" constant="290" id="pfH-gW-ZXo"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="pfH-gW-ZXo"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="426" id="nbB-EU-vvW"/>
-                                    <constraint firstAttribute="width" constant="290" id="pfH-gW-ZXo"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gln-aU-1SA" firstAttribute="top" secondItem="Rig-uK-s4S" secondAttribute="bottom" constant="56" id="Sf7-AS-kh0"/>
-                            <constraint firstItem="jJd-Bu-Bdg" firstAttribute="top" secondItem="gln-aU-1SA" secondAttribute="bottom" constant="28" id="k82-Gt-Q7M"/>
-                            <constraint firstItem="Rig-uK-s4S" firstAttribute="centerX" secondItem="MrZ-YM-XUr" secondAttribute="centerX" id="nBa-5U-Vye"/>
-                            <constraint firstItem="gln-aU-1SA" firstAttribute="leading" secondItem="MrZ-YM-XUr" secondAttribute="leadingMargin" constant="-8" id="yDo-hL-J7z"/>
+                            <constraint firstItem="T6W-RS-1dx" firstAttribute="leading" secondItem="MrZ-YM-XUr" secondAttribute="leadingMargin" constant="4" id="2KO-El-tgj"/>
+                            <constraint firstItem="T6W-RS-1dx" firstAttribute="top" secondItem="bBq-nX-eVH" secondAttribute="bottom" constant="24" id="Z3l-eu-1tw"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -702,11 +712,11 @@
             <objects>
                 <tableViewController id="nhK-S9-mxa" customClass="HistorialVinoTableViewController" customModule="firstAppWine" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qYM-Fn-Ta6" customClass="his">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" id="5NA-VL-aLL">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-GJ-gmP">
@@ -720,8 +730,8 @@
                                         <segue destination="byh-sW-Kfj" kind="show" id="5ci-wx-42i"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
-                                    <rect key="frame" x="48" y="7" width="272" height="32"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
+                                    <rect key="frame" x="48" y="7" width="552" height="32"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Historial">
                                             <attributes>
@@ -742,10 +752,10 @@
                         </stackView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5jf-Yf-YKS">
-                                <rect key="frame" x="0.0" y="74" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="74" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5jf-Yf-YKS" id="Pgz-FB-1St">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
