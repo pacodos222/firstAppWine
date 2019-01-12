@@ -265,9 +265,10 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let controller = segue.destinationViewController as! SeleccionarVinoController
-        controller.vino = vino
-        
+        if (segue.identifier == "seleccionarVinoSegue"){
+            let controller = segue.destinationViewController as! SeleccionarVinoController
+            controller.vino = vino
+        }
     }
     
     
