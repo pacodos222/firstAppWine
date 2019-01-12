@@ -1105,6 +1105,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="seleccionarTinto:" destination="Sur-Pw-E0T" eventType="touchUpInside" id="J2J-j1-rAk"/>
                                                             <segue destination="glz-ax-WXM" kind="show" identifier="seleccionarTintoSegue" id="og7-KY-87y"/>
                                                         </connections>
                                                     </button>
@@ -1159,6 +1160,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="seleccionarRosado:" destination="Sur-Pw-E0T" eventType="touchUpInside" id="1Pp-43-u9U"/>
                                                             <segue destination="glz-ax-WXM" kind="show" identifier="seleccionarRosadoSegue" id="y5Y-xK-dhZ"/>
                                                         </connections>
                                                     </button>
@@ -1216,6 +1218,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="seleccionarBlanco:" destination="Sur-Pw-E0T" eventType="touchUpInside" id="yfr-JW-Tz6"/>
                                                             <segue destination="glz-ax-WXM" kind="show" identifier="seleccionarBlancoSegue" id="e46-3Q-eCu"/>
                                                         </connections>
                                                     </button>
@@ -1451,7 +1454,7 @@
         <segue reference="M5Q-G7-cei"/>
         <segue reference="y4J-MM-C8i"/>
         <segue reference="y5Y-xK-dhZ"/>
-        <segue reference="uzI-pI-7Tz"/>
+        <segue reference="gqt-Qv-h5Z"/>
         <segue reference="5ci-wx-42i"/>
         <segue reference="snl-Oe-iGG"/>
     </inferredMetricsTieBreakers>

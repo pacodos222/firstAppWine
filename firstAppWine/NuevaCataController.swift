@@ -241,13 +241,13 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     @IBAction func actualizarTabla(sender: UISlider) {
-        tablaDeMierda(celdaMod)
+        tablaDeBien(celdaMod)
         labelSlider.text = "\(slider.value)"
         data[celdaMod] = selectedValue + " \(slider.value)"
         
     }
     
-    func tablaDeMierda(celda: Int){
+    func tablaDeBien(celda: Int){
         let indexPath = NSIndexPath(forRow: celda, inSection: 0)
         tabla.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
         
