@@ -16,6 +16,9 @@ class InicioController: UIViewController {
     @IBOutlet weak var passTxt: UITextField!
     let dato = NSUserDefaults()
     
+    var usuario: Usuario?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,9 +44,10 @@ class InicioController: UIViewController {
         do
         {
            let result = try context.executeFetchRequest(request) as! [NSManagedObject]
-            
+            usuario = result[0] as! Usuario
             if result.count == 1
             {
+                
                 dato.setObject(usuarioTxt.text, forKey: "user")
                 dato.synchronize()
                 performSegueWithIdentifier("segueLogin", sender: self)
@@ -62,6 +66,14 @@ class InicioController: UIViewController {
         {}
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+            let controller = segue.destinationViewController as! MenuController
+            controller.usuario = usuario
+     
+    }
+
     
 
     /*

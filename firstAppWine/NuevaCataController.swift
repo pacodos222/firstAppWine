@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var slider: UISlider!
@@ -19,6 +20,9 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var pickerData: [String] = [String]()
     var vino : Vino?
+    var usuario : Usuario?
+    var cata : Cata?
+    let fecha = ""
     var selectedValue = ""
     var celdaMod = 0
     var valorAux = 0
@@ -27,13 +31,27 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerData = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
-        
+       
         self.picker.delegate = self
         self.picker.dataSource = self
         labelSlider.text = "0"
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         inicializarVino()
+        inicializarCata()
+        cata?.fecha = getFecha()
+             
         
+    }
+    
+    func getFecha() -> String{
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        
+        let year = calendar.component(.Year, fromDate: date)
+        let month = calendar.component(.Month, fromDate: date)
+        let day = calendar.component(.Day, fromDate: date)
+        
+        return "\(day)" + "/"+"\(month)"+"/"+"\(year)"
     }
     
     func inicializarVino(){
@@ -42,6 +60,14 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let entity = NSEntityDescription.entityForName("Vino", inManagedObjectContext: managedContext)
         vino = Vino(entity: entity!, insertIntoManagedObjectContext: managedContext)
     }
+    
+    func inicializarCata(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let entity = NSEntityDescription.entityForName("Cata", inManagedObjectContext: managedContext)
+        cata = Cata(entity: entity!, insertIntoManagedObjectContext: managedContext)
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
