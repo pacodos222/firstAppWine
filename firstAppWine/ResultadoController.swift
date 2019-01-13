@@ -21,16 +21,15 @@ class ResultadoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //inicializarVista()
-        print("\(vino)"+"Aaaaaa")
-          self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        inicializarVista()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    //Metodo que inicializa los labels y las imagenes
     func inicializarVista(){
         comp = (vino?.claseEstimada)!
         switch comp{

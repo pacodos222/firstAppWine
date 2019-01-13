@@ -17,43 +17,24 @@ class SeleccionarVinoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-          self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //Cada una de las siguientes acciones están asociadas al botón Seleccionar de la vista
-    
     @IBAction func seleccionarTinto(sender: UIButton) {
-      /*  vino?.claseEstimada = "tinto"
-        vino?.claseReal = "tinto"
-        almacenarVinoBD()
-        comprobarVinoBD()
-        comprobarCataBD()*/
-
     }
     
     @IBAction func seleccionarRosado(sender: UIButton) {
-       /* vino?.claseEstimada = "rosado"
-        vino?.claseReal = "rosado"
-        almacenarVinoBD()
-        comprobarVinoBD()
-        comprobarCataBD()*/
-
     }
     
     @IBAction func seleccionarBlanco(sender: UIButton) {
-        /*vino?.claseEstimada = "blanco"
-        vino?.claseReal = "blanco"
-        almacenarVinoBD()
-        comprobarVinoBD()
-        comprobarCataBD()*/
     }
     
+    //Metodo que almacena el vino y una nueva cata
     func almacenarVinoBD(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
@@ -145,17 +126,9 @@ class SeleccionarVinoController: UIViewController {
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
-
-            
             let controller = segue.destinationViewController as! ResultadoController
             controller.vino = vino
         }
-
-    
-        
-            
-        
-
         
     }
     
