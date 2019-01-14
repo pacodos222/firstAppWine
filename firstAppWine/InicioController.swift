@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+var usuario: Usuario?
+
 
 class InicioController: UIViewController {
     
@@ -16,7 +18,6 @@ class InicioController: UIViewController {
     @IBOutlet weak var passTxt: UITextField!
     let dato = NSUserDefaults()
     
-    var usuario: Usuario?
 
     
     override func viewDidLoad() {
@@ -66,13 +67,7 @@ class InicioController: UIViewController {
         {}
         
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-       
-            let controller = segue.destinationViewController as! MenuController
-            controller.usuario = usuario
-     
-    }
+
 
     
 

@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+var vino : Vino?
+var cata : Cata?
+
 
 class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,9 +22,6 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var tabla: UITableView!
     
     var pickerData: [String] = [String]()
-    var vino : Vino?
-    var usuario : Usuario?
-    var cata : Cata?
     let fecha = ""
     var selectedValue = ""
     var celdaMod = 0
@@ -66,8 +66,34 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entityForName("Cata", inManagedObjectContext: managedContext)
         cata = Cata(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        hacerRelacion()
     }
 
+    func hacerRelacion(){
+        
+        usuario!.setValue(NSSet(object: cata!), forKey: "usuarioCata")
+        cata!.setValue(vino!, forKey: "vinoCata")
+        
+        
+        
+        mostrarResult()
+    }
+    
+    func mostrarResult(){
+        print("vamos a comprobar si esta almacenado la relacion")
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Cata")
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            print(results)
+            print(results.count)
+        }
+        catch{
+            print("FAIL")
+        }
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -237,12 +263,6 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func valorSlider(sender: UISlider) {
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "seleccionarVinoSegue"){
-            let controller = segue.destinationViewController as! SeleccionarVinoController
-            controller.vino = vino
-        }
-    }
     
     func sliderDinamico(maximo : Float){
         

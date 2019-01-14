@@ -12,9 +12,7 @@ import CoreData
 class SeleccionarVinoController: UIViewController {
 
     @IBOutlet weak var labelNuevaCata: UILabel!
-    
-    var vino : Vino?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
@@ -55,7 +53,6 @@ class SeleccionarVinoController: UIViewController {
         wine.setValue(vino?.proanthocyanins, forKey: "proanthocyanins")
         wine.setValue(vino?.proline, forKey: "proline")
         cata.setValue(true, forKey: "resultado")
-        cata.setValue("12/1/19", forKey: "fecha")
 
         do{
             try managedContext.save()
@@ -108,8 +105,6 @@ class SeleccionarVinoController: UIViewController {
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
-            let controller = segue.destinationViewController as! ResultadoController
-            controller.vino = vino
         }
         if ( segue.identifier == "seleccionarRosadoSegue" ){
             vino?.claseEstimada = "rosado"
@@ -117,8 +112,6 @@ class SeleccionarVinoController: UIViewController {
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
-            let controller = segue.destinationViewController as! ResultadoController
-            controller.vino = vino
         }
         if ( segue.identifier == "seleccionarBlancoSegue"){
             vino?.claseEstimada = "blanco"
@@ -126,8 +119,6 @@ class SeleccionarVinoController: UIViewController {
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
-            let controller = segue.destinationViewController as! ResultadoController
-            controller.vino = vino
         }
         
     }

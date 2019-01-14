@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ResultadoController: UIViewController {
 
@@ -14,13 +15,24 @@ class ResultadoController: UIViewController {
     @IBOutlet weak var lblSeleccionado: UILabel!
     @IBOutlet weak var imagenCorrecta: UIImageView!
     @IBOutlet weak var lblCorrecta: UILabel!
-    
-    var vino : Vino?
-    
+        
     var comp : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("vamos a comprobar si esta almacenado la relacion")
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Cata")
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            print(results)
+            print(results.count)
+        }
+        catch{
+            print("FAIL")
+        }
+
         inicializarVista()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }

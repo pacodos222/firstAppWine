@@ -14,7 +14,6 @@ class MenuController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     
     let dato = NSUserDefaults()
-    var usuario : Usuario?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +27,7 @@ class MenuController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "nuevaCataSegue"){
-            let controller = segue.destinationViewController as! NuevaCataController
-            controller.usuario = usuario
-        }
-    }
+    
 
   
   
