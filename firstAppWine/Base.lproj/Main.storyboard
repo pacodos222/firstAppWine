@@ -93,6 +93,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="imageUser" destination="2kh-UQ-Dkh" id="qSL-90-cii"/>
                         <outlet property="userLabel" destination="dgG-RQ-abS" id="QhJ-er-Pnr"/>
                     </connections>
                 </viewController>
@@ -1459,11 +1460,11 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M5Q-G7-cei"/>
+        <segue reference="AQ2-P9-zJM"/>
         <segue reference="XKi-4k-jol"/>
         <segue reference="uzI-pI-7Tz"/>
         <segue reference="e46-3Q-eCu"/>
-        <segue reference="5ci-wx-42i"/>
+        <segue reference="RLz-eA-tWK"/>
         <segue reference="snl-Oe-iGG"/>
     </inferredMetricsTieBreakers>
 </document>

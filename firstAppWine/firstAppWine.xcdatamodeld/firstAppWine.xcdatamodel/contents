@@ -6,7 +6,7 @@
         <relationship name="vinoCata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vino" syncable="YES"/>
     </entity>
     <entity name="Usuario" representedClassName=".Usuario" syncable="YES">
-        <attribute name="imagen" optional="YES" attributeType="Transformable" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="usuarioCata" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cata" syncable="YES"/>
@@ -27,7 +27,7 @@
     </entity>
     <elements>
         <element name="Cata" positionX="-1242" positionY="-369" width="128" height="90"/>
-        <element name="Usuario" positionX="-1665" positionY="-481" width="128" height="105"/>
+        <element name="Usuario" positionX="-1665" positionY="-481" width="128" height="103"/>
         <element name="Vino" positionX="-855" positionY="-324" width="128" height="225"/>
     </elements>
 </model>
