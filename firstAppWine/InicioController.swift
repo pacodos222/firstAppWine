@@ -45,11 +45,9 @@ class InicioController: UIViewController {
         do
         {
            let result = try context.executeFetchRequest(request) as! [NSManagedObject]
-            usuario = result[0] as! Usuario
-            if result.count == 1
+                       if result.count == 1
             {
-                print("VAAA user")
-                print(usuario?.username)
+                usuario = result[0] as! Usuario
 
                 performSegueWithIdentifier("segueLogin", sender: self)
             }

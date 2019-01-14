@@ -19,6 +19,30 @@ class HistorialController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if((segue.identifier == "tintoHistorialSegue") || (segue.identifier == "blancoHistorialSegue") || (segue.identifier == "rosadoHistorialSegue")){
+        
+        let controller = segue.destinationViewController as! HistorialVinoTableViewController
+        
+        if(segue.identifier == "tintoHistorialSegue"){
+            controller.vinoSeleccionado = "tinto"
+            
+        }
+        if(segue.identifier == "blancoHistorialSegue"){
+            controller.vinoSeleccionado = "blanco"
+            
+        }
+        if(segue.identifier == "rosadoHistorialSegue"){
+            controller.vinoSeleccionado = "rosado"
+            
+        }
+        }
+        
+            
+        
+            }
 
 
 
