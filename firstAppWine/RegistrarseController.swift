@@ -17,11 +17,12 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var foto: UIImageView!
     
     var objeto = [NSManagedObject]()
+    var userImage = UIImage()
     var listaUsers = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mostrar()
+        //mostrar()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)    }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +43,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         foto.image = selectedImage
+        userImage = selectedImage
         dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -92,7 +94,22 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
         if((contra == repC && contra.isEmpty == false && repC.isEmpty == false))
         {
             item.setValue(nombre, forKey: "username")
+            //guardarImagen(userImage)
+            //item.setValue(userImage, forKey: "imagen")
             item.setValue(contra, forKey: "password")
+            
+            
+            
+            let imageData = UIImagePNGRepresentation(userImage) as NSData?
+
+             item.setValue(imageData, forKey: "imagen")
+            
+            
+            
+            
+            
+            
+            
             
             do{
                 try managedContext.save()
@@ -137,6 +154,44 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
      
     }
     
+    /*func guardarImagen(image: UIImage) {
+        var results :[Any] = []
+        
+
+        let imageData = UIImagePNGRepresentation(image) as NSData?
+        
+       
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        
+        // 1
+        let managedContext = appDelegate.managedObjectContext
+        
+        // 2
+        let entity =
+            NSEntityDescription.entityForName("Usuario",
+                                       inManagedObjectContext: managedContext)!
+        
+        let person = NSManagedObject(entity: entity,
+                                     insertIntoManagedObjectContext: managedContext)
+        
+        // 3
+        //print(image)
+        person.setValue(imageData, forKeyPath: "imagen")
+        
+        // 4
+        do {
+            try managedContext.save()
+            results.append(person)
+            
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
     func mostrar() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
@@ -151,7 +206,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
         catch{
             print("FAIL")
         }
-    }
+    }*/
 
 
 }

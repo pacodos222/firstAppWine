@@ -16,7 +16,7 @@ class InicioController: UIViewController {
     
     @IBOutlet weak var usuarioTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
-    let dato = NSUserDefaults()
+    
     
 
     
@@ -51,8 +51,6 @@ class InicioController: UIViewController {
                 print("VAAA user")
                 print(usuario?.username)
 
-                dato.setObject(usuarioTxt.text, forKey: "user")
-                dato.synchronize()
                 performSegueWithIdentifier("segueLogin", sender: self)
             }
             else

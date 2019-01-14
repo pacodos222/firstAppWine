@@ -14,7 +14,7 @@ import CoreData
 
 extension Usuario {
 
-    @NSManaged var imagen: String?
+    @NSManaged var imagen: NSData?
     @NSManaged var password: String?
     @NSManaged var username: String?
     @NSManaged var usuarioCata: NSSet?
