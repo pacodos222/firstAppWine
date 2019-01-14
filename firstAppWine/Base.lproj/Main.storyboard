@@ -754,14 +754,23 @@
                             </constraints>
                         </stackView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5jf-Yf-YKS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaHistorial" id="5jf-Yf-YKS" customClass="HistorialVinoTableViewCell" customModule="firstAppWine" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="74" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5jf-Yf-YKS" id="Pgz-FB-1St">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evd-BS-n6V">
+                                            <rect key="frame" x="22" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="lblFecha" destination="evd-BS-n6V" id="ixy-nb-MAt"/>
                                     <segue destination="gez-nf-C3u" kind="show" identifier="historialFechaSegue" id="hdD-lI-uu9"/>
                                 </connections>
                             </tableViewCell>
@@ -1451,11 +1460,11 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="snl-Oe-iGG"/>
-        <segue reference="5ci-wx-42i"/>
         <segue reference="M5Q-G7-cei"/>
-        <segue reference="txL-7O-yGy"/>
+        <segue reference="XKi-4k-jol"/>
+        <segue reference="uzI-pI-7Tz"/>
         <segue reference="e46-3Q-eCu"/>
-        <segue reference="gqt-Qv-h5Z"/>
+        <segue reference="5ci-wx-42i"/>
+        <segue reference="snl-Oe-iGG"/>
     </inferredMetricsTieBreakers>
 </document>

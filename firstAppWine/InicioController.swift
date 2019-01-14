@@ -48,7 +48,9 @@ class InicioController: UIViewController {
             usuario = result[0] as! Usuario
             if result.count == 1
             {
-                
+                print("VAAA user")
+                print(usuario?.username)
+
                 dato.setObject(usuarioTxt.text, forKey: "user")
                 dato.synchronize()
                 performSegueWithIdentifier("segueLogin", sender: self)

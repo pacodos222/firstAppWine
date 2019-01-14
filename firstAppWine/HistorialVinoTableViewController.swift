@@ -10,8 +10,15 @@ import UIKit
 
 class HistorialVinoTableViewController: UITableViewController {
 
+    var resu = [Cata]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        for i in (usuario?.usuarioCata)!{
+            resu.append(i as! Cata)
+        }
+        print(resu)
+        print(resu.first?.fecha)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
 
@@ -31,23 +38,21 @@ class HistorialVinoTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return resu.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return resu.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("celdaHistorial", forIndexPath: indexPath)
+        cell.textLabel?.text = resu[indexPath.item].fecha
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
