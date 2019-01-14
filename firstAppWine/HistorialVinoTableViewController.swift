@@ -19,10 +19,13 @@ class HistorialVinoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(vinoSeleccionado)
+        
         for i in (usuario?.usuarioCata)!{
             resu.append(i as! Cata)
         }
-        comprobarVino()
+        
+        print(resu.count)
+        //comprobarVino()
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
@@ -43,19 +46,24 @@ class HistorialVinoTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return resu.count
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return resu.count
+           comprobarVino()
+        if(comprobar == true){
+        
+        return resuAux.count
+        }
+        return 0
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
         
-        //comprobarVino()
+        comprobarVino()
         
         let cell = tableView.dequeueReusableCellWithIdentifier("celdaHistorial", forIndexPath: indexPath)
         
@@ -78,6 +86,7 @@ class HistorialVinoTableViewController: UITableViewController {
                     resuAux.append(cata)
                 }
                 if(resuAux.count != 0){
+                print("\(vinoAux.claseReal)" + "AAaAAAAA")
                 comprobar = true
                 }
             }
