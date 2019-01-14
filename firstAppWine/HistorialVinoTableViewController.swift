@@ -11,14 +11,19 @@ import UIKit
 class HistorialVinoTableViewController: UITableViewController {
 
     var resu = [Cata]()
+    var vinoSeleccionado = ""
+    var resuAux = [Cata]()
+    var comprobar = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(vinoSeleccionado)
         for i in (usuario?.usuarioCata)!{
             resu.append(i as! Cata)
         }
-        print(resu)
-        print(resu.first?.fecha)
+        comprobarVino()
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
 
@@ -48,9 +53,64 @@ class HistorialVinoTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       
+        
+        //comprobarVino()
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("celdaHistorial", forIndexPath: indexPath)
-        cell.textLabel?.text = resu[indexPath.item].fecha
+        
+        if(comprobar == true){
+            cell.textLabel?.text = resuAux[indexPath.item].fecha
+        }else{
+        cell.textLabel?.text = ""
+        }
         return cell
+    }
+    
+        func comprobarVino(){
+            
+        switch vinoSeleccionado {
+            
+        case "tinto":
+            for cata in resu{
+               let vinoAux = cata.vinoCata as! Vino
+                if(vinoAux.claseReal == vinoSeleccionado ){
+                    resuAux.append(cata)
+                }
+                if(resuAux.count != 0){
+                comprobar = true
+                }
+            }
+            
+        case "blanco":
+            for cata in resu{
+                let vinoAux = cata.vinoCata as! Vino
+                if(vinoAux.claseReal == vinoSeleccionado ){
+                    resuAux.append(cata)
+                }
+                if(resuAux.count != 0){
+                comprobar = true
+                }
+            }
+            
+        case"rosado":
+            print("ABBAAAAABAWERQWEQWEQWEQWDQERQ")
+                for cata in resu{
+                    let vinoAux = cata.vinoCata as! Vino
+                    if(vinoAux.claseReal == vinoSeleccionado ){
+                        resuAux.append(cata)
+                    }
+                }
+                if(resuAux.count != 0){
+            comprobar = true
+            }
+        default:
+            print("Error")
+
+           
+
+        }
+            
     }
     
 
