@@ -12,6 +12,7 @@ class HistorialVinoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblFecha: UIView!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
