@@ -39,6 +39,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         inicializarVino()
         inicializarCata()
         cata?.fecha = getFecha()
+        cata?.resultado = true
              
         
     }
