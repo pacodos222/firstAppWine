@@ -25,6 +25,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="300" image="prueba" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-UQ-Dkh">
                                         <rect key="frame" x="0.0" y="0.0" width="236" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="236" id="KiR-4q-zSU"/>
+                                            <constraint firstAttribute="height" constant="300" id="s1V-TP-rU4"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-RQ-abS">
                                         <rect key="frame" x="91" y="310" width="54" height="23"/>

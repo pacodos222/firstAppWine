@@ -22,7 +22,7 @@ class MenuController: UIViewController {
         //print(usuario?.imagen)
         //print("imagen impresa")
         
-        imageUser.image = UIImage(data: (usuario?.imagen)!,scale:1.0)
+        imageUser.image = UIImage(data: (usuario?.imagen)!)
         
         userLabel.text = usuario?.username
         //print(usuario?.imagen)
