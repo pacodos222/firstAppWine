@@ -17,7 +17,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var foto: UIImageView!
     
     var objeto = [NSManagedObject]()
-    var userImage = UIImage()
+    var userImage = UIImage() 
     var listaUsers = [String]()
     
     override func viewDidLoad() {

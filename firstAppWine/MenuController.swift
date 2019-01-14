@@ -16,7 +16,7 @@ class MenuController: UIViewController {
     @IBOutlet weak var imageUser: UIImageView!
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
         //print("se va a imprimir la imagen")
         //print(usuario?.imagen)
