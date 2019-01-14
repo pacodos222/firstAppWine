@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HistorialVinoTableViewController: UITableViewController {
 
@@ -18,6 +19,7 @@ class HistorialVinoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cargarUserBd()
         print(vinoSeleccionado)
         
         for i in (usuario?.usuarioCata)!{
@@ -25,7 +27,7 @@ class HistorialVinoTableViewController: UITableViewController {
         }
         
         print(resu.count)
-        //comprobarVino()
+        comprobarVino()
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
@@ -51,9 +53,8 @@ class HistorialVinoTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-           comprobarVino()
+          // comprobarVino()
         if(comprobar == true){
-        
         return resuAux.count
         }
         return 0
@@ -63,7 +64,7 @@ class HistorialVinoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
         
-        comprobarVino()
+        //comprobarVino()
         
         let cell = tableView.dequeueReusableCellWithIdentifier("celdaHistorial", forIndexPath: indexPath)
         
@@ -86,7 +87,6 @@ class HistorialVinoTableViewController: UITableViewController {
                     resuAux.append(cata)
                 }
                 if(resuAux.count != 0){
-                print("\(vinoAux.claseReal)" + "AAaAAAAA")
                 comprobar = true
                 }
             }
@@ -103,8 +103,7 @@ class HistorialVinoTableViewController: UITableViewController {
             }
             
         case"rosado":
-            print("ABBAAAAABAWERQWEQWEQWEQWDQERQ")
-                for cata in resu{
+                            for cata in resu{
                     let vinoAux = cata.vinoCata as! Vino
                     if(vinoAux.claseReal == vinoSeleccionado ){
                         resuAux.append(cata)
@@ -121,6 +120,27 @@ class HistorialVinoTableViewController: UITableViewController {
         }
             
     }
+    
+    func cargarUserBd() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Usuario")
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            for p in results {
+                let userAux = p as! Usuario
+                if(userAux.username == usuario?.username){
+                    usuario = userAux
+                }
+            }
+            
+        }
+        catch{
+            print("FAIL")
+        }
+        
+    }
+
     
 
     /*

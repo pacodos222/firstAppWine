@@ -71,9 +71,11 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
 
     func hacerRelacion(){
-        
-        usuario!.setValue(NSSet(object: cata!), forKey: "usuarioCata")
+       
+       // usuario!.setValue(NSSet(object: cata!), forKey: "usuarioCata")
+        usuario!.usuarioCata?.setByAddingObject(cata!)
         cata!.setValue(vino!, forKey: "vinoCata")
+        
         
         
         
