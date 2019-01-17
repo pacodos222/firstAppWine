@@ -82,7 +82,7 @@ class HistorialVinoTableViewController: UITableViewController {
             
         case "tinto":
             for cata in resu{
-               let vinoAux = cata.vinoCata as! Vino
+               let vinoAux = cata.vinoCata! as! Vino
                 if(vinoAux.claseReal == vinoSeleccionado ){
                     resuAux.append(cata)
                 }
@@ -93,7 +93,7 @@ class HistorialVinoTableViewController: UITableViewController {
             
         case "blanco":
             for cata in resu{
-                let vinoAux = cata.vinoCata as! Vino
+                let vinoAux = cata.vinoCata! as! Vino
                 if(vinoAux.claseReal == vinoSeleccionado ){
                     resuAux.append(cata)
                 }
@@ -104,7 +104,7 @@ class HistorialVinoTableViewController: UITableViewController {
             
         case"rosado":
                             for cata in resu{
-                    let vinoAux = cata.vinoCata as! Vino
+                    let vinoAux = cata.vinoCata! as! Vino
                     if(vinoAux.claseReal == vinoSeleccionado ){
                         resuAux.append(cata)
                     }
