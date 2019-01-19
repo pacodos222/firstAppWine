@@ -141,7 +141,15 @@ class HistorialVinoTableViewController: UITableViewController {
         
     }
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "historialFechaSegue"{
+            
+            let celdaRef = sender as! UITableViewCell
+            let destinoVC = segue.destinationViewController as! VistaEspecificaHistorialController
+            let filaSeleccionada = tableView.indexPathForCell(celdaRef)
+            destinoVC.wine = resuAux[(filaSeleccionada?.row)!]
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

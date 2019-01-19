@@ -11,9 +11,11 @@ import UIKit
 var tipoWine : String = ""
 
 class VistaEspecificaHistorialController: UIViewController {
-
     
     @IBOutlet weak var lblTipoVino: UILabel!
+    @IBOutlet weak var tabla: UITableView!
+    
+    var wine : Cata?
     
     override func viewDidLoad() {
         super.viewDidLoad()
