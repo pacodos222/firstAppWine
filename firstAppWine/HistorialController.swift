@@ -28,15 +28,16 @@ class HistorialController: UIViewController {
         
         if(segue.identifier == "tintoHistorialSegue"){
             controller.vinoSeleccionado = "tinto"
+            tipoWine = "Tinto"
             
         }
         if(segue.identifier == "blancoHistorialSegue"){
             controller.vinoSeleccionado = "blanco"
-            
+            tipoWine = "Blanco"
         }
         if(segue.identifier == "rosadoHistorialSegue"){
             controller.vinoSeleccionado = "rosado"
-            
+            tipoWine = "Rosado"
         }
         }
         

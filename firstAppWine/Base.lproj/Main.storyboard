@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17G3025" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hcG-TM-wkl">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hcG-TM-wkl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -738,7 +738,7 @@
                                         <segue destination="byh-sW-Kfj" kind="show" id="5ci-wx-42i"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
                                     <rect key="frame" x="48" y="7" width="272" height="32"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Historial">
@@ -789,10 +789,10 @@
             </objects>
             <point key="canvasLocation" x="1728" y="-217"/>
         </scene>
-        <!--View Controller-->
+        <!--Vista Especifica Historial Controller-->
         <scene sceneID="IRc-kr-kCq">
             <objects>
-                <viewController id="gez-nf-C3u" sceneMemberID="viewController">
+                <viewController id="gez-nf-C3u" customClass="VistaEspecificaHistorialController" customModule="firstAppWine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="20L-bM-lE7"/>
                         <viewControllerLayoutGuide type="bottom" id="AUl-8k-Fys"/>
@@ -864,6 +864,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblTipoVino" destination="tmw-f2-KdC" id="ZEd-i8-snJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neh-Uv-i46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1464,11 +1467,11 @@
         <image name="tinto" width="112" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AQ2-P9-zJM"/>
-        <segue reference="XKi-4k-jol"/>
-        <segue reference="uzI-pI-7Tz"/>
         <segue reference="e46-3Q-eCu"/>
-        <segue reference="RLz-eA-tWK"/>
+        <segue reference="uzI-pI-7Tz"/>
+        <segue reference="fA9-nj-Pa4"/>
+        <segue reference="5ci-wx-42i"/>
         <segue reference="snl-Oe-iGG"/>
+        <segue reference="AQ2-P9-zJM"/>
     </inferredMetricsTieBreakers>
 </document>
