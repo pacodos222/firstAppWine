@@ -21,8 +21,12 @@ class MenuController: UIViewController {
         //print("se va a imprimir la imagen")
         //print(usuario?.imagen)
         //print("imagen impresa")
-        
-        imageUser.image = UIImage(data: (usuario?.imagen)!)
+        if(usuario?.imagen == nil){
+            self.imageUser.image = UIImage(named: "prueba")
+        }else{
+            self.imageUser.image = UIImage(data: (usuario?.imagen)!)
+        }
+
         
         userLabel.text = usuario?.username
         //print(usuario?.imagen)
