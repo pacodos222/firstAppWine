@@ -69,7 +69,8 @@ class HistorialVinoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("celdaHistorial", forIndexPath: indexPath)
         
         if(comprobar == true){
-            cell.textLabel?.text = resuAux[indexPath.item].fecha
+            let label = resuAux[indexPath.item].fecha! + "\t\t\t\tAcierto! 👍"
+            cell.textLabel?.text = label
             cell.accessoryType = .DisclosureIndicator
         }else{
         cell.textLabel?.text = ""
