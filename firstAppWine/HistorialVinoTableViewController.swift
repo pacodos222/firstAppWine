@@ -70,6 +70,7 @@ class HistorialVinoTableViewController: UITableViewController {
         
         if(comprobar == true){
             cell.textLabel?.text = resuAux[indexPath.item].fecha
+            cell.accessoryType = .DisclosureIndicator
         }else{
         cell.textLabel?.text = ""
         }
