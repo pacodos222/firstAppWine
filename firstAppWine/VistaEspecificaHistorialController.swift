@@ -10,7 +10,7 @@ import UIKit
 
 var tipoWine : String = ""
 
-class VistaEspecificaHistorialController: UIViewController {
+class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var lblTipoVino: UILabel!
     @IBOutlet weak var tabla: UITableView!
@@ -28,6 +28,19 @@ class VistaEspecificaHistorialController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("VistaEspecificaTableViewCell", forIndexPath: indexPath)
+        cell.textLabel?.text = "A"
+        
+        return cell
+    }
+    
+ 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
