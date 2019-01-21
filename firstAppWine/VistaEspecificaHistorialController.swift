@@ -17,6 +17,8 @@ class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate,
     
     var wine : Cata?
     
+    var totalVinos : [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lblTipoVino.text = "Vino " + tipoWine
@@ -30,17 +32,31 @@ class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 11
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        cargarDatos()
         let cell = tableView.dequeueReusableCellWithIdentifier("VistaEspecificaTableViewCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "A"
+        cell.textLabel?.text = totalVinos[indexPath.row]
         
         return cell
     }
     
- 
+    func cargarDatos(){
+        totalVinos.removeAll()
+        totalVinos.append("Fecha: \t" + ((wine?.fecha))!)
+        totalVinos.append("Alcalinity Of Ash\t" + ((wine?.vinoCata?.alcalinityOfAsh)?.stringValue)!)
+        totalVinos.append("Alcohol\t" + ((wine?.vinoCata?.alcohol)?.stringValue)!)
+        totalVinos.append("Ash\t" + ((wine?.vinoCata?.ash)?.stringValue)!)
+        totalVinos.append("Color Intensity\t" + ((wine?.vinoCata?.colorIntensitiy)?.stringValue)!)
+        totalVinos.append("Flavanoids\t" + ((wine?.vinoCata?.flavonoids)?.stringValue)!)
+        totalVinos.append("Hue\t" + ((wine?.vinoCata?.hue)?.stringValue)!)
+        totalVinos.append("Non Flavanoids Phenols\t" + ((wine?.vinoCata?.nonFlavonoidsPhenols)?.stringValue)!)
+        totalVinos.append("OD280 \t" + ((wine?.vinoCata?.od280)?.stringValue)!)
+        totalVinos.append("Proanthocyanins\t" + ((wine?.vinoCata?.proanthocyanins)?.stringValue)!)
+        totalVinos.append("Proline\t" + ((wine?.vinoCata?.proline)?.stringValue)!)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
