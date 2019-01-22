@@ -23,7 +23,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         //mostrar()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo1")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo4")!)
     }
 
     override func didReceiveMemoryWarning() {

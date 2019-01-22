@@ -34,7 +34,7 @@ class MenuController: UIViewController {
         
         userLabel.text = usuario?.username
         //print(usuario?.imagen)
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo1")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo4")!)
         
     }
 

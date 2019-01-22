@@ -40,7 +40,7 @@ class ResultadoController: UIViewController {
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         backgroundImage.image = UIImage(named: "fondo")
         self.view.insertSubview(backgroundImage, atIndex: 0)
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo4")!)
         
     }
 
