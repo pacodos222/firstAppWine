@@ -35,7 +35,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.picker.delegate = self
         self.picker.dataSource = self
         labelSlider.text = "0"
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         inicializarVino()
         inicializarCata()
         cata?.fecha = getFecha()

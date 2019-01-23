@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "blanco.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "vinoBlanco.jpeg",
       "scale" : "2x"
     },
     {

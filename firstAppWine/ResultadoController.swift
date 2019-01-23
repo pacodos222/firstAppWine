@@ -34,7 +34,10 @@ class ResultadoController: UIViewController {
         }
 
         inicializarVista()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "fondo2")
+        self.view.insertSubview(backgroundImage, atIndex: 0)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo2")!)
     }
 
     override func didReceiveMemoryWarning() {

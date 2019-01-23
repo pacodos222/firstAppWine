@@ -12,7 +12,7 @@ class HistorialController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }
 
     override func didReceiveMemoryWarning() {

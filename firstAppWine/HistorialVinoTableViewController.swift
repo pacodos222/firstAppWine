@@ -29,7 +29,7 @@ class HistorialVinoTableViewController: UITableViewController {
         print(resu.count)
         comprobarVino()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
 
         // Uncomment the following line to preserve selection between presentations

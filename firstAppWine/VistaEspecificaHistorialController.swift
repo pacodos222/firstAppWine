@@ -22,7 +22,7 @@ class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         lblTipoVino.text = "Vino " + tipoWine
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         // Do any additional setup after loading the view.
     }
 

@@ -27,10 +27,16 @@ class MenuController: UIViewController {
             self.imageUser.image = UIImage(data: (usuario?.imagen)!)
         }
 
+        imageUser.layer.borderWidth = 1.0
+        imageUser.layer.masksToBounds = false
+        imageUser.layer.borderColor = UIColor.blackColor().CGColor
+        imageUser.layer.cornerRadius = imageUser.bounds.size.width / 2.0
+        imageUser.clipsToBounds = true
+        
         
         userLabel.text = usuario?.username
         //print(usuario?.imagen)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
         
     }
 
