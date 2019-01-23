@@ -10,9 +10,12 @@ import UIKit
 import CoreData
 
 var usuario: Usuario?
-
+var etiqueta: String?
 
 class InicioController: UIViewController {
+    
+    
+    
     
     @IBOutlet weak var usuarioTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
@@ -22,6 +25,12 @@ class InicioController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        #if LPS1
+            etiqueta = "App1"
+        #else
+            etiqueta = "App2"
+        #endif
 
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
     }

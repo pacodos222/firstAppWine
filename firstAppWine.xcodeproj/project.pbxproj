@@ -26,6 +26,32 @@
 		296AA3C421BEC11F00B8AAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296AA3C221BEC11F00B8AAC3 /* LaunchScreen.storyboard */; };
 		54DEBFBA21C4051300670198 /* HistorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DEBFB921C4051300670198 /* HistorialController.swift */; };
 		54DEBFBC21C40B6200670198 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DEBFBB21C40B6200670198 /* InicioController.swift */; };
+		8383FE6221F8920100344F80 /* HistorialVinoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383FE5F21F8920100344F80 /* HistorialVinoTableViewCell.swift */; };
+		8383FE6321F8920100344F80 /* VistaEspecificaHistorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383FE6021F8920100344F80 /* VistaEspecificaHistorialController.swift */; };
+		8383FE6421F8920100344F80 /* VistaEspecificaTableViwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383FE6121F8920100344F80 /* VistaEspecificaTableViwCell.swift */; };
+		8383FE6721F896EF00344F80 /* NuevaCataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9DF5C21E65FAC00656FC9 /* NuevaCataTableViewCell.swift */; };
+		8383FE6821F896EF00344F80 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DEBFBB21C40B6200670198 /* InicioController.swift */; };
+		8383FE6921F896EF00344F80 /* Vino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8BB21C7F49600C25D47 /* Vino.swift */; };
+		8383FE6A21F896EF00344F80 /* NuevaCataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954117B21BEE99F00E34A8B /* NuevaCataController.swift */; };
+		8383FE6B21F896EF00344F80 /* SeleccionarVinoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8C221C813D700C25D47 /* SeleccionarVinoController.swift */; };
+		8383FE6C21F896EF00344F80 /* HistorialVinoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8C621C819CE00C25D47 /* HistorialVinoTableViewController.swift */; };
+		8383FE6D21F896EF00344F80 /* RegistrarseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8C821C81F4600C25D47 /* RegistrarseController.swift */; };
+		8383FE6E21F896EF00344F80 /* firstAppWine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3BD21BEC11F00B8AAC3 /* firstAppWine.xcdatamodeld */; };
+		8383FE6F21F896EF00344F80 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3B821BEC11F00B8AAC3 /* MenuController.swift */; };
+		8383FE7021F896EF00344F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AA3B621BEC11F00B8AAC3 /* AppDelegate.swift */; };
+		8383FE7121F896EF00344F80 /* Vino+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8BA21C7F49600C25D47 /* Vino+CoreDataProperties.swift */; };
+		8383FE7221F896EF00344F80 /* Cata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B621C7F49600C25D47 /* Cata+CoreDataProperties.swift */; };
+		8383FE7321F896EF00344F80 /* HistorialVinoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383FE5F21F8920100344F80 /* HistorialVinoTableViewCell.swift */; };
+		8383FE7421F896EF00344F80 /* Cata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B721C7F49600C25D47 /* Cata.swift */; };
+		8383FE7521F896EF00344F80 /* HistorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DEBFB921C4051300670198 /* HistorialController.swift */; };
+		8383FE7621F896EF00344F80 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B921C7F49600C25D47 /* Usuario.swift */; };
+		8383FE7721F896EF00344F80 /* VistaEspecificaHistorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383FE6021F8920100344F80 /* VistaEspecificaHistorialController.swift */; };
+		8383FE7821F896EF00344F80 /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8B821C7F49600C25D47 /* Usuario+CoreDataProperties.swift */; };
+		8383FE7921F896EF00344F80 /* ResultadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935B8C421C816F400C25D47 /* ResultadoController.swift */; };
+		8383FE7A21F896EF00344F80 /* VistaEspecificaTableViwCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383FE6121F8920100344F80 /* VistaEspecificaTableViwCell.swift */; };
+		8383FE7D21F896EF00344F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296AA3C221BEC11F00B8AAC3 /* LaunchScreen.storyboard */; };
+		8383FE7E21F896EF00344F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296AA3C021BEC11F00B8AAC3 /* Assets.xcassets */; };
+		8383FE7F21F896EF00344F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296AA3BA21BEC11F00B8AAC3 /* Main.storyboard */; };
 		A1E9DF5D21E65FAC00656FC9 /* NuevaCataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9DF5C21E65FAC00656FC9 /* NuevaCataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,11 +77,23 @@
 		296AA3C521BEC11F00B8AAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54DEBFB921C4051300670198 /* HistorialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialController.swift; sourceTree = "<group>"; };
 		54DEBFBB21C40B6200670198 /* InicioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
+		8383FE5F21F8920100344F80 /* HistorialVinoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialVinoTableViewCell.swift; sourceTree = "<group>"; };
+		8383FE6021F8920100344F80 /* VistaEspecificaHistorialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaEspecificaHistorialController.swift; sourceTree = "<group>"; };
+		8383FE6121F8920100344F80 /* VistaEspecificaTableViwCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaEspecificaTableViwCell.swift; sourceTree = "<group>"; };
+		8383FE8321F896EF00344F80 /* segundaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segundaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8383FE8421F896F000344F80 /* firstAppWine copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "firstAppWine copy-Info.plist"; path = "/Users/administrador/Documents/firstAppWine/firstAppWine copy-Info.plist"; sourceTree = "<absolute>"; };
 		A1E9DF5C21E65FAC00656FC9 /* NuevaCataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaCataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		296AA3B021BEC11F00B8AAC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8383FE7B21F896EF00344F80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,6 +108,7 @@
 			children = (
 				296AA3B521BEC11F00B8AAC3 /* firstAppWine */,
 				296AA3B421BEC11F00B8AAC3 /* Products */,
+				8383FE8421F896F000344F80 /* firstAppWine copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				296AA3B321BEC11F00B8AAC3 /* firstAppWine.app */,
+				8383FE8321F896EF00344F80 /* segundaApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +124,9 @@
 		296AA3B521BEC11F00B8AAC3 /* firstAppWine */ = {
 			isa = PBXGroup;
 			children = (
+				8383FE5F21F8920100344F80 /* HistorialVinoTableViewCell.swift */,
+				8383FE6021F8920100344F80 /* VistaEspecificaHistorialController.swift */,
+				8383FE6121F8920100344F80 /* VistaEspecificaTableViwCell.swift */,
 				2935B8B621C7F49600C25D47 /* Cata+CoreDataProperties.swift */,
 				2935B8B721C7F49600C25D47 /* Cata.swift */,
 				2935B8B821C7F49600C25D47 /* Usuario+CoreDataProperties.swift */,
@@ -129,6 +172,23 @@
 			productReference = 296AA3B321BEC11F00B8AAC3 /* firstAppWine.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8383FE6521F896EF00344F80 /* segundaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8383FE8021F896EF00344F80 /* Build configuration list for PBXNativeTarget "segundaApp" */;
+			buildPhases = (
+				8383FE6621F896EF00344F80 /* Sources */,
+				8383FE7B21F896EF00344F80 /* Frameworks */,
+				8383FE7C21F896EF00344F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = segundaApp;
+			productName = firstAppWine;
+			productReference = 8383FE8321F896EF00344F80 /* segundaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				296AA3B221BEC11F00B8AAC3 /* firstAppWine */,
+				8383FE6521F896EF00344F80 /* segundaApp */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +231,16 @@
 				296AA3C421BEC11F00B8AAC3 /* LaunchScreen.storyboard in Resources */,
 				296AA3C121BEC11F00B8AAC3 /* Assets.xcassets in Resources */,
 				296AA3BC21BEC11F00B8AAC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8383FE7C21F896EF00344F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8383FE7D21F896EF00344F80 /* LaunchScreen.storyboard in Resources */,
+				8383FE7E21F896EF00344F80 /* Assets.xcassets in Resources */,
+				8383FE7F21F896EF00344F80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,11 +263,41 @@
 				296AA3B721BEC11F00B8AAC3 /* AppDelegate.swift in Sources */,
 				2935B8C021C7F49600C25D47 /* Vino+CoreDataProperties.swift in Sources */,
 				2935B8BC21C7F49600C25D47 /* Cata+CoreDataProperties.swift in Sources */,
+				8383FE6221F8920100344F80 /* HistorialVinoTableViewCell.swift in Sources */,
 				2935B8BD21C7F49600C25D47 /* Cata.swift in Sources */,
 				54DEBFBA21C4051300670198 /* HistorialController.swift in Sources */,
 				2935B8BF21C7F49600C25D47 /* Usuario.swift in Sources */,
+				8383FE6321F8920100344F80 /* VistaEspecificaHistorialController.swift in Sources */,
 				2935B8BE21C7F49600C25D47 /* Usuario+CoreDataProperties.swift in Sources */,
 				2935B8C521C816F400C25D47 /* ResultadoController.swift in Sources */,
+				8383FE6421F8920100344F80 /* VistaEspecificaTableViwCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8383FE6621F896EF00344F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8383FE6721F896EF00344F80 /* NuevaCataTableViewCell.swift in Sources */,
+				8383FE6821F896EF00344F80 /* InicioController.swift in Sources */,
+				8383FE6921F896EF00344F80 /* Vino.swift in Sources */,
+				8383FE6A21F896EF00344F80 /* NuevaCataController.swift in Sources */,
+				8383FE6B21F896EF00344F80 /* SeleccionarVinoController.swift in Sources */,
+				8383FE6C21F896EF00344F80 /* HistorialVinoTableViewController.swift in Sources */,
+				8383FE6D21F896EF00344F80 /* RegistrarseController.swift in Sources */,
+				8383FE6E21F896EF00344F80 /* firstAppWine.xcdatamodeld in Sources */,
+				8383FE6F21F896EF00344F80 /* MenuController.swift in Sources */,
+				8383FE7021F896EF00344F80 /* AppDelegate.swift in Sources */,
+				8383FE7121F896EF00344F80 /* Vino+CoreDataProperties.swift in Sources */,
+				8383FE7221F896EF00344F80 /* Cata+CoreDataProperties.swift in Sources */,
+				8383FE7321F896EF00344F80 /* HistorialVinoTableViewCell.swift in Sources */,
+				8383FE7421F896EF00344F80 /* Cata.swift in Sources */,
+				8383FE7521F896EF00344F80 /* HistorialController.swift in Sources */,
+				8383FE7621F896EF00344F80 /* Usuario.swift in Sources */,
+				8383FE7721F896EF00344F80 /* VistaEspecificaHistorialController.swift in Sources */,
+				8383FE7821F896EF00344F80 /* Usuario+CoreDataProperties.swift in Sources */,
+				8383FE7921F896EF00344F80 /* ResultadoController.swift in Sources */,
+				8383FE7A21F896EF00344F80 /* VistaEspecificaTableViwCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +413,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = firstAppWine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D LPS1";
 				PRODUCT_BUNDLE_IDENTIFIER = ual.esual.esual.es.firstAppWine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -325,6 +427,34 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = firstAppWine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D LPS1";
+				PRODUCT_BUNDLE_IDENTIFIER = ual.esual.esual.es.firstAppWine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8383FE8121F896EF00344F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "firstAppWine copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D LPS2";
+				PRODUCT_BUNDLE_IDENTIFIER = ual.esual.esual.es.firstAppWine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8383FE8221F896EF00344F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "firstAppWine copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D LPS2";
 				PRODUCT_BUNDLE_IDENTIFIER = ual.esual.esual.es.firstAppWine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +477,15 @@
 			buildConfigurations = (
 				296AA3C921BEC11F00B8AAC3 /* Debug */,
 				296AA3CA21BEC11F00B8AAC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8383FE8021F896EF00344F80 /* Build configuration list for PBXNativeTarget "segundaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8383FE8121F896EF00344F80 /* Debug */,
+				8383FE8221F896EF00344F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
