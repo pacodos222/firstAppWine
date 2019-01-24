@@ -37,7 +37,20 @@ class ResultadoController: UIViewController {
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         backgroundImage.image = UIImage(named: "fondo2")
         self.view.insertSubview(backgroundImage, atIndex: 0)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo2")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
+        
+        imagenSeleccionada.layer.borderWidth = 1.0
+        imagenSeleccionada.layer.masksToBounds = false
+        imagenSeleccionada.layer.borderColor = UIColor.blackColor().CGColor
+        imagenSeleccionada.layer.cornerRadius = imagenSeleccionada.bounds.size.width / 4.0
+        imagenSeleccionada.clipsToBounds = true
+        
+        imagenCorrecta.layer.borderWidth = 1.0
+        imagenCorrecta.layer.masksToBounds = false
+        imagenCorrecta.layer.borderColor = UIColor.blackColor().CGColor
+        imagenCorrecta.layer.cornerRadius = imagenCorrecta.bounds.size.width / 4.0
+        imagenCorrecta.clipsToBounds = true
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,10 +12,33 @@ import CoreData
 class SeleccionarVinoController: UIViewController {
 
     @IBOutlet weak var labelNuevaCata: UILabel!
+    @IBOutlet weak var imgTinto: UIImageView!
+    @IBOutlet weak var imgRosado: UIImageView!
+    @IBOutlet weak var imgBlanco: UIImageView!
         
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
+        
+        imgTinto.layer.borderWidth = 1.0
+        imgTinto.layer.masksToBounds = false
+        imgTinto.layer.borderColor = UIColor.blackColor().CGColor
+        imgTinto.layer.cornerRadius = imgTinto.bounds.size.width / 4.0
+        imgTinto.clipsToBounds = true
+        
+        imgRosado.layer.borderWidth = 1.0
+        imgRosado.layer.masksToBounds = false
+        imgRosado.layer.borderColor = UIColor.blackColor().CGColor
+        imgRosado.layer.cornerRadius = imgRosado.bounds.size.width / 4.0
+        imgRosado.clipsToBounds = true
+        
+        imgBlanco.layer.borderWidth = 1.0
+        imgBlanco.layer.masksToBounds = false
+        imgBlanco.layer.borderColor = UIColor.blackColor().CGColor
+        imgBlanco.layer.cornerRadius = imgBlanco.bounds.size.width / 4.0
+        imgBlanco.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

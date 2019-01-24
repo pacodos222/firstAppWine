@@ -32,7 +32,7 @@ class InicioController: UIViewController {
             etiqueta = "App2"
         #endif
 
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
     }
 
     override func didReceiveMemoryWarning() {
