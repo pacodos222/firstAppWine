@@ -13,9 +13,18 @@ class HistorialController: UIViewController {
     @IBOutlet weak var imgRosado: UIImageView!
     @IBOutlet weak var imgBlanco: UIImageView!
     
+    @IBOutlet weak var labelTinto: UILabel!
+    
+    @IBOutlet weak var labelRosado: UILabel!
+    
+    @IBOutlet weak var labelBlanco: UILabel!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
+        calcularAcierto()
         
         imgTinto.layer.borderWidth = 1.0
         imgTinto.layer.masksToBounds = false
@@ -39,6 +48,64 @@ class HistorialController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+   func calcularAcierto(){
+    var auxTinto = 0
+    var catasTinto = 0
+    var auxRosado = 0
+    var catasRosado = 0
+    var auxBlanco = 0
+    var catasBlanco = 0
+    var array = [Cata]()
+    
+    for p in (usuario?.usuarioCata)!   {
+        
+        array.append(p as! Cata)
+    }
+    
+    for i in array{
+    
+            if(i.vinoCata!.claseReal == "tinto"){
+                catasTinto += 1
+                if(vino?.claseReal == vino?.claseEstimada){
+                    auxTinto += 1
+                }
+            }
+            if(i.vinoCata!.claseReal == "rosado"){
+                catasRosado += 1
+                if(vino?.claseReal == vino?.claseEstimada){
+                    auxRosado += 1
+                }
+            }
+            if(i.vinoCata!.claseReal == "blanco"){
+                catasBlanco += 1
+                if(vino?.claseReal == vino?.claseEstimada){
+                    auxBlanco += 1
+                }
+            }
+
+
+        
+    }
+    if(catasTinto == 0){
+        labelTinto.text = "0%"
+    }else{
+    
+        labelTinto.text = "\(auxTinto/catasTinto*100)"+"%"
+    }
+    if(catasRosado == 0){
+        labelRosado.text = "0%"
+    }else{
+        
+        labelRosado.text = "\(auxRosado/catasRosado*100)"+"%"
+    }
+    if(catasBlanco == 0){
+        labelBlanco.text = "0%"
+    }else{
+        
+        labelBlanco.text = "\(auxBlanco/catasBlanco*100)"+"%"
+    }
     }
     
     

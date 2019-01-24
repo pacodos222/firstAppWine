@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17G3025" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hcG-TM-wkl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17G4015" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hcG-TM-wkl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -716,6 +716,9 @@
                         <outlet property="imgBlanco" destination="TDW-Ju-2Zr" id="UHe-01-6VH"/>
                         <outlet property="imgRosado" destination="Exj-mI-kiA" id="WzD-QF-pWt"/>
                         <outlet property="imgTinto" destination="EcK-Ys-BUS" id="dVM-0y-M1e"/>
+                        <outlet property="labelBlanco" destination="lhg-IT-yff" id="h2X-of-Liw"/>
+                        <outlet property="labelRosado" destination="nkq-gx-QyJ" id="A3x-GW-DnI"/>
+                        <outlet property="labelTinto" destination="CbM-xo-25g" id="6zd-hy-weM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKM-gl-4oj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -727,12 +730,12 @@
             <objects>
                 <tableViewController id="nhK-S9-mxa" customClass="HistorialVinoTableViewController" customModule="firstAppWine" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qYM-Fn-Ta6" customClass="his">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" id="5NA-VL-aLL">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-GJ-gmP">
@@ -749,7 +752,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
-                                    <rect key="frame" x="48" y="7" width="272" height="32"/>
+                                    <rect key="frame" x="48" y="7" width="552" height="32"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Historial">
                                             <attributes>
@@ -770,10 +773,10 @@
                         </stackView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaHistorial" id="5jf-Yf-YKS" customClass="HistorialVinoTableViewCell" customModule="firstAppWine" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="74" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5jf-Yf-YKS" id="Pgz-FB-1St">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evd-BS-n6V">
