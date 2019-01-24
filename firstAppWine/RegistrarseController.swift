@@ -22,7 +22,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //mostrar()
+        mostrar()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)    
     }
 
@@ -69,11 +69,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
     func registro(nombre: String, contra: String, repC: String)
     {
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName("Usuario", inManagedObjectContext: managedContext)
-        
-        let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+
         
         if(listaUsers.contains(nombre)){
         
@@ -90,10 +86,16 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
             self.presentViewController(alerta, animated:true, completion: nil)
     }
     
-        
+        else{
         //Comprobamos que la repeticion de contraseña sea igual
         if((contra == repC && contra.isEmpty == false && repC.isEmpty == false))
         {
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            let entity = NSEntityDescription.entityForName("Usuario", inManagedObjectContext: managedContext)
+            
+            let item = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+            
             item.setValue(nombre, forKey: "username")
             //guardarImagen(userImage)
             //item.setValue(userImage, forKey: "imagen")
@@ -151,7 +153,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
         //Tambien podemos poner otra alerta avisando de que el user ya está
         
 
-        
+        }
      
     }
     
@@ -191,7 +193,7 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
-    
+    */
     
     func mostrar() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -202,12 +204,12 @@ class RegistrarseController: UIViewController, UIImagePickerControllerDelegate, 
             for p in results {
                 listaUsers.append(p.valueForKey("username") as! String)
             }
-            print(listaUsers)
+            //print(listaUsers)
         }
         catch{
-            print("FAIL")
+           // print("FAIL")
         }
-    }*/
+    }
 
 
 }
