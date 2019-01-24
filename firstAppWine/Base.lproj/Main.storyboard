@@ -712,6 +712,11 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgBlanco" destination="TDW-Ju-2Zr" id="UHe-01-6VH"/>
+                        <outlet property="imgRosado" destination="Exj-mI-kiA" id="WzD-QF-pWt"/>
+                        <outlet property="imgTinto" destination="EcK-Ys-BUS" id="dVM-0y-M1e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKM-gl-4oj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1508,9 +1513,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="snl-Oe-iGG"/>
         <segue reference="RLz-eA-tWK"/>
-        <segue reference="y4J-MM-C8i"/>
-        <segue reference="y5Y-xK-dhZ"/>
-        <segue reference="uzI-pI-7Tz"/>
+        <segue reference="fA9-nj-Pa4"/>
         <segue reference="AQ2-P9-zJM"/>
+        <segue reference="gqt-Qv-h5Z"/>
+        <segue reference="y5Y-xK-dhZ"/>
     </inferredMetricsTieBreakers>
 </document>
