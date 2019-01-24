@@ -6,7 +6,7 @@
 //  Copyright © 2019 ual.es. All rights reserved.
 //
 
-import UIKit
+import UIKit 
 
 class NuevaCataTableViewCell: UITableViewCell {
 
