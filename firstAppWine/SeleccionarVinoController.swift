@@ -39,6 +39,8 @@ class SeleccionarVinoController: UIViewController {
         imgBlanco.layer.borderColor = UIColor.blackColor().CGColor
         imgBlanco.layer.cornerRadius = imgBlanco.bounds.size.width / 4.0
         imgBlanco.clipsToBounds = true
+        
+        arbol()
     }
 
     override func didReceiveMemoryWarning() {
@@ -154,21 +156,21 @@ class SeleccionarVinoController: UIViewController {
         
         if (segue.identifier == "seleccionarTintoSegue" ){
             vino?.claseEstimada = "tinto"
-            vino?.claseReal = "tinto"
+          //  vino?.claseReal = "tinto"
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
         }
         if ( segue.identifier == "seleccionarRosadoSegue" ){
             vino?.claseEstimada = "rosado"
-            vino?.claseReal = "rosado"
+           // vino?.claseReal = "rosado"
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
         }
         if ( segue.identifier == "seleccionarBlancoSegue"){
             vino?.claseEstimada = "blanco"
-            vino?.claseReal = "blanco"
+           // vino?.claseReal = "blanco"
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()

@@ -64,23 +64,27 @@ class HistorialController: UIViewController {
         array.append(p as! Cata)
     }
     
-    for i in array{
     
+    for i in array{
+            print("////////////////////////////////////")
+            print(i.vinoCata?.claseReal)
+            print(i.vinoCata?.claseEstimada)
             if(i.vinoCata!.claseReal == "tinto"){
                 catasTinto += 1
-                if(vino?.claseReal == vino?.claseEstimada){
+                if(i.vinoCata?.claseReal == i.vinoCata?.claseEstimada){
                     auxTinto += 1
                 }
             }
             if(i.vinoCata!.claseReal == "rosado"){
                 catasRosado += 1
-                if(vino?.claseReal == vino?.claseEstimada){
+                if(i.vinoCata?.claseReal == i.vinoCata?.claseEstimada){
+                    
                     auxRosado += 1
                 }
             }
             if(i.vinoCata!.claseReal == "blanco"){
                 catasBlanco += 1
-                if(vino?.claseReal == vino?.claseEstimada){
+                if(i.vinoCata?.claseReal == i.vinoCata?.claseEstimada){
                     auxBlanco += 1
                 }
             }
@@ -91,22 +95,21 @@ class HistorialController: UIViewController {
     if(catasTinto == 0){
         labelTinto.text = "0%"
     }else{
-        
-        labelTinto.text = "\(auxTinto/catasTinto*100)"+"%"
+        let aux : Double = Double(auxTinto) / Double(catasTinto)
+        labelTinto.text = "\(aux*100)"+"%"
     }
     if(catasRosado == 0){
         labelRosado.text = "0%"
     }else{
-        print(auxRosado)
-        print(catasRosado)
-        labelRosado.text = "\(auxRosado/catasRosado*100)"+"%"
+        let aux : Double = Double(auxRosado) / Double(catasRosado)
+        labelRosado.text = "\(aux*100)"+"%"
     }
     if(catasBlanco == 0){
         labelBlanco.text = "0%"
     }else{
-        
-        labelBlanco.text = "\(auxBlanco/catasBlanco*100)"+"%"
-    }
+        let aux : Double = Double(auxBlanco) / Double (catasBlanco)
+        labelBlanco.text = "\(aux*100)"+"%"
+        }
     }
     
     
