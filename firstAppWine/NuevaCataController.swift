@@ -27,11 +27,17 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var celdaMod = 0
     var valorAux = 0
     var data = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
+
+     var data2 = ["Alcohol","Color intensity","Flavonoids"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerData = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
-       
+        if(etiqueta == "App2")
+        {
+            print("ASASDASDFASFDAFSDFSDFSDF")
+            pickerData = ["Alcohol","Color intensity","Flavonoids"]
+        }
         self.picker.delegate = self
         self.picker.dataSource = self
         labelSlider.text = "0"
@@ -128,7 +134,8 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         selectedValue = pickerData[row]
-        
+        if(etiqueta == "App1")
+        {
         switch selectedValue{
         case "Alcalinity":
             celdaMod = 0
@@ -198,18 +205,54 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             sliderDinamico(14)
             valorSlider(slider)
             vino?.proline = slider.value
-            scroll(celdaMod)
+           scroll(celdaMod)
             
         default:
             print("ERROR")
+            }
         }
-        
+        else
+        {
+            switch selectedValue{
+            case "Alcohol":
+                celdaMod = 0
+                sliderDinamico(6)
+                valorSlider(slider)
+                vino?.alcohol = slider.value
+      //          scroll(celdaMod)
+                
+
+                
+            case "Color intensity":
+                celdaMod = 1
+                sliderDinamico(8)
+                valorSlider(slider)
+                vino?.colorIntensitiy = slider.value
+        //        scroll(celdaMod)
+                
+            case "Flavonoids":
+                celdaMod = 2
+                sliderDinamico(9)
+                valorSlider(slider)
+                vino?.flavonoids = slider.value
+       //         scroll(celdaMod)
+                
+            default:
+                print("ERROR")
+            }
+
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
+       let cell = tableView.dequeueReusableCellWithIdentifier("NuevaCataTableViewCell", forIndexPath: indexPath)
+        if(etiqueta == "App2")
+        {
+            cell.textLabel?.text = data2[indexPath.item]
+        }else {
         cell.textLabel?.text = data[indexPath.item]
+        }
         
         switch selectedValue{
         case "Alcalinity":
@@ -218,7 +261,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         case "Alcohol":
             vino?.alcohol = slider.value
             
-        case "Ash":
+       case "Ash":
             vino?.ash = slider.value
             
         case "Color intensity":
@@ -256,7 +299,12 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func actualizarTabla(sender: UISlider) {
         tablaDeBien(celdaMod)
         labelSlider.text = "\(slider.value)"
+        if(etiqueta == "App2"){
+            data2[celdaMod] = selectedValue + " \(slider.value)"
+
+        }else{
         data[celdaMod] = selectedValue + " \(slider.value)"
+        }
     }
     
     func tablaDeBien(celda: Int){
