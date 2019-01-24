@@ -91,13 +91,14 @@ class HistorialController: UIViewController {
     if(catasTinto == 0){
         labelTinto.text = "0%"
     }else{
-    
+        
         labelTinto.text = "\(auxTinto/catasTinto*100)"+"%"
     }
     if(catasRosado == 0){
         labelRosado.text = "0%"
     }else{
-        
+        print(auxRosado)
+        print(catasRosado)
         labelRosado.text = "\(auxRosado/catasRosado*100)"+"%"
     }
     if(catasBlanco == 0){

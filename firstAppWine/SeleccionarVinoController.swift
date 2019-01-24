@@ -45,6 +45,36 @@ class SeleccionarVinoController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func arbol(){
+        if((vino?.flavonoids as! Double) <= 1.57 ){
+            if((vino?.colorIntensitiy as! Double) <= 3.8){
+                vino?.claseReal = "rosado"
+                            }
+            else{
+                vino?.claseReal = "blanco"
+                
+            }
+        }else{
+            if((vino?.alcohol as! Double) <= 12.77 ){
+                vino?.claseReal = "rosado"
+               
+            }else{
+                if((vino?.flavonoids as! Double) <= 2.11){
+                    vino?.claseReal = "rosado"
+                    
+                }else{
+                    if((vino?.colorIntensitiy as! Double) <= 3.4){
+                        vino?.claseReal = "rosado"
+                                            }else{
+                        vino?.claseReal = "tinto"
+                       	
+                    }
+                }
+            }
+        }
+    }
+
+    
     //Cada una de las siguientes acciones están asociadas al botón Seleccionar de la vista
     @IBAction func seleccionarTinto(sender: UIButton) {
     }
