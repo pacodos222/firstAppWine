@@ -32,8 +32,11 @@ class ResultadoController: UIViewController {
         catch{
             print("FAIL")
         }
-
+        if(etiqueta == "App2"){
+        arbol()
+        }
         inicializarVista()
+        
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
         backgroundImage.image = UIImage(named: "fondo2")
         self.view.insertSubview(backgroundImage, atIndex: 0)
@@ -50,24 +53,74 @@ class ResultadoController: UIViewController {
         switch comp{
         case "tinto":
             lblSeleccionado.text = "Vino Tinto"
+            
+            if(etiqueta == "App1"){
             lblCorrecta.text = "Vino Tinto"
-            imagenSeleccionada.image = UIImage(named: "tinto")
             imagenCorrecta.image = UIImage(named: "tinto")
+            }
+            
+            imagenSeleccionada.image = UIImage(named: "tinto")
             
         case "blanco":
             lblSeleccionado.text = "Vino Blanco"
+            
+            if(etiqueta == "App1"){
             lblCorrecta.text = "Vino Blanco"
-            imagenSeleccionada.image = UIImage(named: "blanco")
             imagenCorrecta.image = UIImage(named: "blanco")
+            }
+            
+            imagenSeleccionada.image = UIImage(named: "blanco")
+      
             
         case "rosado":
             lblSeleccionado.text = "Vino Rosado"
+            
+            if(etiqueta == "App1"){
             lblCorrecta.text = "Vino Rosado"
-            imagenSeleccionada.image = UIImage(named: "rosado")
             imagenCorrecta.image = UIImage(named: "rosado")
-        
+            }
+            
+            imagenSeleccionada.image = UIImage(named: "rosado")
+            
         default:
             print("ERROR")
+        }
+    }
+    
+    func arbol(){
+        if((vino?.flavonoids as! Double) <= 1.57 ){
+            if((vino?.colorIntensitiy as! Double) <= 3.8){
+                vino?.claseReal = "rosado"
+                lblCorrecta.text = "Vino Rosado"
+                imagenCorrecta.image = UIImage(named: "rosado")
+            }
+            else{
+                vino?.claseReal = "blanco"
+                lblCorrecta.text = "Vino Blanco"
+                imagenCorrecta.image = UIImage(named: "blanco")
+            }
+        }else{
+            if((vino?.alcohol as! Double) <= 12.77 ){
+                vino?.claseReal = "rosado"
+                lblCorrecta.text = "Vino Rosado"
+                imagenCorrecta.image = UIImage(named: "rosado")
+            }else{
+                if((vino?.flavonoids as! Double) <= 2.11){
+                    vino?.claseReal = "rosado"
+                    lblCorrecta.text = "Vino Rosado"
+                    imagenCorrecta.image = UIImage(named: "rosado")
+                }else{
+                    if((vino?.colorIntensitiy as! Double) <= 3.4){
+                        vino?.claseReal = "rosado"
+                        lblCorrecta.text = "Vino Rosado"
+                        imagenCorrecta.image = UIImage(named: "rosado")
+                    }else{
+                        vino?.claseReal = "tinto"
+                         lblCorrecta.text = "Vino Tinto"
+                        imagenCorrecta.image = UIImage(named: "tinto")
+                    }
+                }
+            }
         }
     }
     

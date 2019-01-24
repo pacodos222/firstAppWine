@@ -15,7 +15,7 @@ class SeleccionarVinoController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
     }
 
     override func didReceiveMemoryWarning() {
