@@ -66,9 +66,6 @@ class HistorialController: UIViewController {
     
     
     for i in array{
-            print("////////////////////////////////////")
-            print(i.vinoCata?.claseReal)
-            print(i.vinoCata?.claseEstimada)
             if(i.vinoCata!.claseReal == "tinto"){
                 catasTinto += 1
                 if(i.vinoCata?.claseReal == i.vinoCata?.claseEstimada){
@@ -93,19 +90,19 @@ class HistorialController: UIViewController {
         
     }
     if(catasTinto == 0){
-        labelTinto.text = "0%"
+        labelTinto.text = "0,0%"
     }else{
         let aux : Double = Double(auxTinto) / Double(catasTinto)
         labelTinto.text = "\(aux*100)"+"%"
     }
     if(catasRosado == 0){
-        labelRosado.text = "0%"
+        labelRosado.text = "0,0%"
     }else{
         let aux : Double = Double(auxRosado) / Double(catasRosado)
         labelRosado.text = "\(aux*100)"+"%"
     }
     if(catasBlanco == 0){
-        labelBlanco.text = "0%"
+        labelBlanco.text = "0,0%"
     }else{
         let aux : Double = Double(auxBlanco) / Double (catasBlanco)
         labelBlanco.text = "\(aux*100)"+"%"
