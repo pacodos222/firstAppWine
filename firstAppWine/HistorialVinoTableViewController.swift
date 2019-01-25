@@ -67,9 +67,17 @@ class HistorialVinoTableViewController: UITableViewController {
         //comprobarVino()
         
         let cell = tableView.dequeueReusableCellWithIdentifier("celdaHistorial", forIndexPath: indexPath)
-        
+        var label = ""
         if(comprobar == true){
-            let label = resuAux[indexPath.item].fecha! + "\t\t\t\tAcierto! 👍"
+            if(etiqueta == "App2"){
+                if(resuAux[indexPath.item].vinoCata?.claseEstimada != resuAux[indexPath.item].vinoCata?.claseReal){
+                    label = resuAux[indexPath.item].fecha! + "\t\t\t\tFallo! 👎"
+                }else{
+                     label = resuAux[indexPath.item].fecha! + "\t\t\t\tAcierto! 👍"
+                }
+            }else{
+                label = resuAux[indexPath.item].fecha! + "\t\t\t\tAcierto! 👍"
+            }
             cell.textLabel?.text = label
             cell.accessoryType = .DisclosureIndicator
         }else{
@@ -122,6 +130,8 @@ class HistorialVinoTableViewController: UITableViewController {
         }
             
     }
+    
+    
     
     func cargarUserBd() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

@@ -155,22 +155,35 @@ class SeleccionarVinoController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if (segue.identifier == "seleccionarTintoSegue" ){
+            
             vino?.claseEstimada = "tinto"
-          //  vino?.claseReal = "tinto"
+            
+            if(etiqueta == "App1"){
+                vino?.claseReal = "tinto"
+            }
+            
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
         }
         if ( segue.identifier == "seleccionarRosadoSegue" ){
             vino?.claseEstimada = "rosado"
-           // vino?.claseReal = "rosado"
+            
+            if(etiqueta == "App1"){
+                vino?.claseReal = "rosado"
+            }
+            
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
         }
         if ( segue.identifier == "seleccionarBlancoSegue"){
+            
             vino?.claseEstimada = "blanco"
-           // vino?.claseReal = "blanco"
+            
+            if(etiqueta == "App1"){
+                vino?.claseReal = "blanco"
+            }
             almacenarVinoBD()
             comprobarVinoBD()
             comprobarCataBD()
