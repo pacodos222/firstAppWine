@@ -32,14 +32,24 @@ class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        var numeroRow = 0
+        if(etiqueta == "App2"){
+            numeroRow = 4
+        } else {
+            numeroRow = 11
+        }
+        return numeroRow
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if(etiqueta == "App2")
+        {
+            cargarDatosSegundaApp()
+        } else {
         cargarDatos()
+        }
         let cell = tableView.dequeueReusableCellWithIdentifier("VistaEspecificaTableViewCell", forIndexPath: indexPath)
         cell.textLabel?.text = totalVinos[indexPath.row]
-        
         return cell
     }
     
@@ -56,6 +66,15 @@ class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate,
         totalVinos.append("OD280 \t" + ((wine?.vinoCata?.od280)?.stringValue)!)
         totalVinos.append("Proanthocyanins\t" + ((wine?.vinoCata?.proanthocyanins)?.stringValue)!)
         totalVinos.append("Proline\t" + ((wine?.vinoCata?.proline)?.stringValue)!)
+    }
+    
+    func cargarDatosSegundaApp()
+    {
+        totalVinos.removeAll()
+        totalVinos.append("Fecha: \t" + ((wine?.fecha))!)
+        totalVinos.append("Alcohol\t" + ((wine?.vinoCata?.alcohol)?.stringValue)!)
+        totalVinos.append("Color Intensity\t" + ((wine?.vinoCata?.colorIntensitiy)?.stringValue)!)
+        totalVinos.append("Flavanoids\t" + ((wine?.vinoCata?.flavonoids)?.stringValue)!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
