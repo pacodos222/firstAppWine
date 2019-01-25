@@ -96,74 +96,64 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         selectedValue = pickerData[row]
         if(etiqueta == "App1")
         {
-        switch selectedValue{
+            switch selectedValue{
         case "Alcalinity":
             celdaMod = 0
             sliderDinamico(10, maximo: 30)
-            valorSlider(slider)
             vino?.alcalinityOfAsh = slider.value
             scroll(celdaMod)
             
         case "Alcohol":
             celdaMod = 1
             sliderDinamico(11, maximo: 15)
-            valorSlider(slider)
             vino?.alcohol = slider.value
             scroll(celdaMod)
             
         case "Ash":
             celdaMod = 2
             sliderDinamico(1.37, maximo: 3.23)
-            valorSlider(slider)
             vino?.ash = slider.value
             scroll(celdaMod)
             
         case "Color intensity":
             celdaMod = 3
             sliderDinamico(1.28, maximo: 13)
-            valorSlider(slider)
             vino?.colorIntensitiy = slider.value
             scroll(celdaMod)
             
         case "Flavonoids":
             celdaMod = 4
             sliderDinamico(0.34, maximo: 5.08)
-            valorSlider(slider)
             vino?.flavonoids = slider.value
             scroll(celdaMod)
             
         case "Hue":
             celdaMod = 5
             sliderDinamico(0.48, maximo: 1.71)
-            valorSlider(slider)
             vino?.hue = slider.value
             scroll(celdaMod)
             
         case "Non flavonoids Phenols":
             celdaMod = 6
             sliderDinamico(0.13, maximo: 0.66)
-            valorSlider(slider)
             vino?.nonFlavonoidsPhenols = slider.value
             scroll(celdaMod)
             
         case "Od280":
             celdaMod = 7
             sliderDinamico(1.27, maximo: 4)
-            valorSlider(slider)
             vino?.od280 = slider.value
             scroll(celdaMod)
             
         case "Proanthocyanins":
             celdaMod = 8
             sliderDinamico(0.41, maximo: 3.58)
-            valorSlider(slider)
             vino?.proanthocyanins = slider.value
             scroll(celdaMod)
             
         case "Proline":
             celdaMod = 9
             sliderDinamico(278, maximo: 1680)
-            valorSlider(slider)
             vino?.proline = slider.value
            scroll(celdaMod)
             
@@ -177,19 +167,16 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             case "Alcohol":
                 celdaMod = 0
                 sliderDinamico(11, maximo: 15)
-                valorSlider(slider)
                 vino?.alcohol = slider.value
            
             case "Color intensity":
                 celdaMod = 1
                 sliderDinamico(1.28, maximo: 13)
-                valorSlider(slider)
                 vino?.colorIntensitiy = slider.value
                 
             case "Flavonoids":
                 celdaMod = 2
                 sliderDinamico(0.34, maximo: 5.08)
-                valorSlider(slider)
                 vino?.flavonoids = slider.value
                 
             default:
@@ -272,10 +259,7 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         tabla.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
     }
     
-    @IBAction func valorSlider(sender: UISlider) {
-    }
-    
-    
+
     func sliderDinamico(minimo: Float, maximo : Float){
         
         slider.value = 0

@@ -730,12 +730,12 @@
             <objects>
                 <tableViewController id="nhK-S9-mxa" customClass="HistorialVinoTableViewController" customModule="firstAppWine" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qYM-Fn-Ta6" customClass="his">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" id="5NA-VL-aLL">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-GJ-gmP">
@@ -754,8 +754,8 @@
                                         <segue destination="byh-sW-Kfj" kind="show" id="5ci-wx-42i"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
-                                    <rect key="frame" x="48" y="7" width="552" height="32"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-2P-OOV">
+                                    <rect key="frame" x="48" y="7" width="272" height="32"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Historial">
                                             <attributes>
@@ -776,10 +776,10 @@
                         </stackView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaHistorial" id="5jf-Yf-YKS" customClass="HistorialVinoTableViewCell" customModule="firstAppWine" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="74" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5jf-Yf-YKS" id="Pgz-FB-1St">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evd-BS-n6V">
@@ -997,7 +997,6 @@
                                                 <color key="thumbTintColor" red="0.75686274509999996" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="actualizarTabla:" destination="SBz-f9-fm9" eventType="valueChanged" id="lg0-g3-Nsc"/>
-                                                    <action selector="valorSlider:" destination="SBz-f9-fm9" eventType="valueChanged" id="TcK-DP-PNY"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIW-n0-IOZ">
@@ -1517,11 +1516,11 @@
         <image name="tinto" width="349" height="430"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="AQ2-P9-zJM"/>
+        <segue reference="XKi-4k-jol"/>
+        <segue reference="gqt-Qv-h5Z"/>
+        <segue reference="y5Y-xK-dhZ"/>
         <segue reference="snl-Oe-iGG"/>
         <segue reference="5ci-wx-42i"/>
-        <segue reference="fA9-nj-Pa4"/>
-        <segue reference="AQ2-P9-zJM"/>
-        <segue reference="y5Y-xK-dhZ"/>
-        <segue reference="gqt-Qv-h5Z"/>
     </inferredMetricsTieBreakers>
 </document>
