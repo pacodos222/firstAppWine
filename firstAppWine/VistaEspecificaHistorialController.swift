@@ -34,7 +34,7 @@ class VistaEspecificaHistorialController: UIViewController, UITableViewDelegate,
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var numeroRow = 0
         if(etiqueta == "App2"){
-            numeroRow = 3
+            numeroRow = 4
         } else {
             numeroRow = 11
         }
