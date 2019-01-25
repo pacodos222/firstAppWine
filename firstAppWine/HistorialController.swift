@@ -24,8 +24,9 @@ class HistorialController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
+        if(etiqueta == "App2"){
         calcularAcierto()
-        
+        }
         imgTinto.layer.borderWidth = 1.0
         imgTinto.layer.masksToBounds = false
         imgTinto.layer.borderColor = UIColor.blackColor().CGColor
@@ -90,22 +91,22 @@ class HistorialController: UIViewController {
         
     }
     if(catasTinto == 0){
-        labelTinto.text = "0,0%"
+        labelTinto.text = "0%"
     }else{
-        let aux : Double = Double(auxTinto) / Double(catasTinto)
-        labelTinto.text = "\(aux*100)"+"%"
+        let aux = Int(Double(auxTinto) / Double(catasTinto)*100)
+        labelTinto.text = "\(aux)"+"%"
     }
     if(catasRosado == 0){
-        labelRosado.text = "0,0%"
+        labelRosado.text = "0%"
     }else{
-        let aux : Double = Double(auxRosado) / Double(catasRosado)
-        labelRosado.text = "\(aux*100)"+"%"
+        let aux = Int(Double(auxRosado) / Double(catasRosado)*100)
+        labelRosado.text = "\(aux)"+"%"
     }
     if(catasBlanco == 0){
-        labelBlanco.text = "0,0%"
+        labelBlanco.text = "0%"
     }else{
-        let aux : Double = Double(auxBlanco) / Double (catasBlanco)
-        labelBlanco.text = "\(aux*100)"+"%"
+        let aux = Int(Double(auxBlanco) / Double (catasBlanco)*100)
+        labelBlanco.text = "\(aux)"+"%"
         }
     }
     
