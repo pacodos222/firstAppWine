@@ -35,15 +35,13 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         pickerData = ["Alcalinity", "Alcohol", "Ash", "Color intensity", "Flavonoids", "Hue", "Non flavonoids Phenols", "Od280", "Proanthocyanins", "Proline"]
         if(etiqueta == "App2")
         {
-            print("ASASDASDFASFDAFSDFSDFSDF")
             pickerData = ["Alcohol","Color intensity","Flavonoids"]
         }
         self.picker.delegate = self
         self.picker.dataSource = self
         labelSlider.text = "0"
-       self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"fondo3")!)
         inicializarVino()
-        inicializarCata()
         cata?.fecha = getFecha()
         cata?.resultado = true
              
@@ -53,7 +51,6 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func getFecha() -> String{
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        
         let year = calendar.component(.Year, fromDate: date)
         let month = calendar.component(.Month, fromDate: date)
         let day = calendar.component(.Day, fromDate: date)
@@ -66,49 +63,12 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entityForName("Vino", inManagedObjectContext: managedContext)
         vino = Vino(entity: entity!, insertIntoManagedObjectContext: managedContext)
-    }
-    
-    func inicializarCata(){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName("Cata", inManagedObjectContext: managedContext)
-        cata = Cata(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        hacerRelacion()
-    }
-
-    func hacerRelacion(){
-       
-        //usuario!.setValue(NSSet(object: cata!), forKey: "usuarioCata")
-        
+        let entity2 = NSEntityDescription.entityForName("Cata", inManagedObjectContext: managedContext)
+        cata = Cata(entity: entity2!, insertIntoManagedObjectContext: managedContext)
         cata?.cataUsuario = usuario
-        
-        /*let aux =  usuario!.usuarioCata?.setByAddingObject(cata!)
-        
-        usuario!.setValue(NSSet(object: aux!), forKey: "usuarioCata")*/
-        
         cata!.setValue(vino!, forKey: "vinoCata")
-        
-        
-        
-        
-        mostrarResult()
     }
     
-    func mostrarResult(){
-        print("vamos a comprobar si esta almacenado la relacion")
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "Cata")
-        do{
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            print(results)
-            print(results.count)
-        }
-        catch{
-            print("FAIL")
-        }
-
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -219,23 +179,18 @@ class NuevaCataController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 sliderDinamico(6)
                 valorSlider(slider)
                 vino?.alcohol = slider.value
-      //          scroll(celdaMod)
-                
-
-                
+           
             case "Color intensity":
                 celdaMod = 1
                 sliderDinamico(8)
                 valorSlider(slider)
                 vino?.colorIntensitiy = slider.value
-        //        scroll(celdaMod)
                 
             case "Flavonoids":
                 celdaMod = 2
                 sliderDinamico(9)
                 valorSlider(slider)
                 vino?.flavonoids = slider.value
-       //         scroll(celdaMod)
                 
             default:
                 print("ERROR")
