@@ -101,39 +101,18 @@ class ResultadoController: UIViewController {
     }
     
     func arbol(){
-        if((vino?.flavonoids as! Double) <= 1.57 ){
-            if((vino?.colorIntensitiy as! Double) <= 3.8){
-                vino?.claseReal = "rosado"
-                lblCorrecta.text = "Vino Rosado"
-                imagenCorrecta.image = UIImage(named: "rosado")
-            }
-            else{
-                vino?.claseReal = "blanco"
-                lblCorrecta.text = "Vino Blanco"
-                imagenCorrecta.image = UIImage(named: "blanco")
-            }
-        }else{
-            if((vino?.alcohol as! Double) <= 12.77 ){
-                vino?.claseReal = "rosado"
-                lblCorrecta.text = "Vino Rosado"
-                imagenCorrecta.image = UIImage(named: "rosado")
-            }else{
-                if((vino?.flavonoids as! Double) <= 2.11){
-                    vino?.claseReal = "rosado"
-                    lblCorrecta.text = "Vino Rosado"
-                    imagenCorrecta.image = UIImage(named: "rosado")
-                }else{
-                    if((vino?.colorIntensitiy as! Double) <= 3.4){
-                        vino?.claseReal = "rosado"
-                        lblCorrecta.text = "Vino Rosado"
-                        imagenCorrecta.image = UIImage(named: "rosado")
-                    }else{
-                        vino?.claseReal = "tinto"
-                         lblCorrecta.text = "Vino Tinto"
-                        imagenCorrecta.image = UIImage(named: "tinto")
-                    }
-                }
-            }
+        
+        if(vino?.claseReal == "rosado"){
+            lblCorrecta.text = "Vino Rosado"
+            imagenCorrecta.image = UIImage(named: "rosado")
+        }
+        if(vino?.claseReal == "blanco"){
+            lblCorrecta.text = "Vino Blanco"
+            imagenCorrecta.image = UIImage(named: "blanco")
+        }
+        if(vino?.claseReal == "tinto"){
+            lblCorrecta.text = "Vino Tinto"
+            imagenCorrecta.image = UIImage(named: "tinto")
         }
     }
     
